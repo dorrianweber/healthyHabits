@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Habits</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="flex-column justify-space-around">
+        <header class="display-flex justify-space-between align-center p-2">
+            <h1>
+                <span role="img" aria-label="yoga">🧘</span>
+                <a>Healthy Habits!</a>
+
+            </h1>
+            <nav class="topnav">
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <a href="/">Home</a>
+                <a href="/profile">Profile</a>
+                <a href="/categorySelect">Log your habits</a>
+                <button class="no-button" id="logout">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
+        <footer>
+            Thanks for visiting
+        </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{else}}
+    <script src="./js/login.js"></script>
+    {{/if}}
+</body>
+
+</html>

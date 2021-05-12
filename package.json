@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chart.js": "^2.9.4",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "googleapis": "^71.0.0",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "y": "^0.3.2"
+  },
+  "name": "project2",
+  "description": "fix yoself",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorrianweber/project2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorrianweber/project2/issues"
+  },
+  "homepage": "https://github.com/dorrianweber/project2#readme"
+}
