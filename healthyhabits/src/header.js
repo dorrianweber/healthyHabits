@@ -1,27 +1,32 @@
 import React from "react";
 
-function Header () {
-return (
+function Header() {
+  return (
     <div>
-<header class="display-flex justify-space-between align-center p-2">
-            <h1>
-                <span role="img" aria-label="yoga">🧘</span>
-                <a href="/">Healthy Habits!</a>
-
-            </h1>
-            <nav class="topnav">
-                {/* Conditionally render login or logout links */}
-                {/* {{#if logged_in}} */}
-                <a href="/">Home</a>
-                <a href="/profile">Profile</a>
-                <a href="/form">Log your habits</a>
-                <button class="no-button" id="logout">Logout</button>
-                {/* {{else}} */}
-                {/* <a href="/login">Login</a>
+      <header className="display-flex justify-space-between align-center p-2">
+        <h1>
+          <a className="title" href="/">
+            Healthy Habits!
+          </a>
+        </h1>
+        <hr />
+        <nav className="topnav">
+          {/* Conditionally render login or logout links */}
+          {/* {{#if logged_in}} */}
+          <a href="/">Home</a>
+          <a href="/profile">Profile</a>
+          <a href="/form">Log your habits</a>
+          <a href="/logout" className="no-button" id="logout">
+            Logout
+          </a>
+          {/* {{else}} */}
+          {/* <a href="/login">Login</a>
                 {{/if}} */}
-            </nav>
-        </header>
+        </nav>
+        <hr />
+      </header>
     </div>
-)};
+  );
+}
 
 export default Header;
