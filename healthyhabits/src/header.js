@@ -14,7 +14,7 @@ return (
                 {/* {{#if logged_in}} */}
                 <a href="/">Home</a>
                 <a href="/profile">Profile</a>
-                <a href="/categorySelect">Log your habits</a>
+                <a href="/form">Log your habits</a>
                 <button class="no-button" id="logout">Logout</button>
                 {/* {{else}} */}
                 {/* <a href="/login">Login</a>

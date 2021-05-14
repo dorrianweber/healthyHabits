@@ -1,7 +1,7 @@
 import React from "react";
 //, { useState, useEffect }
 
-const Homepage = () => {
+function Homepage () {
     return (
         <div class="row align-center mb-5">
 
@@ -17,19 +17,19 @@ const Homepage = () => {
 
             <div class="row2">
                 <div class="column">
-                    <a>Ability to log calories and spending</a>
+                    <h3>Ability to log calories and spending</h3>
                     <img class="healthy" id="image1" onmouseover="setNewImage1()" onmouseout="setOldImage1()"
                         src="https://github.com/dorrianweber/project2/blob/main/public/images/meals.jpg?raw=true"
                         alt="calories" />
                 </div>
                 <div class="column">
-                    <a>Ability to log hours slept</a>
+                    <h3>Ability to log hours slept</h3>
                     <img class="healthy" id="image2" onmouseover="setNewImage2()" onmouseout="setOldImage2()"
                         src="https://github.com/dorrianweber/project2/blob/main/public/images/sleep.jpg?raw=true"
                         alt="sleeping" />
                 </div>
                 <div class="column">
-                    <a>Ability to Track progress</a>
+                    <h3>Ability to Track progress</h3>
                     <img class="healthy" id="image3" onmouseover="setNewImage3()" onmouseout="setOldImage3()"
                         src="https://github.com/dorrianweber/project2/blob/main/public/images/caloriesGraph.jpg?raw=true"
                         alt="healthy habits" />
