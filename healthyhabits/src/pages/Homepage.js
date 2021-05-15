@@ -26,8 +26,8 @@ function Homepage() {
           <img
             className="healthy"
             id="image1"
-            onmouseover="setNewImage1()"
-            onmouseout="setOldImage1()"
+            onMouseOver="setNewImage1()"
+            onMouseOut="setOldImage1()"
             src="https://github.com/dorrianweber/project2/blob/main/public/images/meals.jpg?raw=true"
             alt="calories"
           />
@@ -37,8 +37,8 @@ function Homepage() {
           <img
             className="healthy"
             id="image2"
-            onmouseover="setNewImage2()"
-            onmouseout="setOldImage2()"
+            onMouseOver="setNewImage2()"
+            onMouseOut="setOldImage2()"
             src="https://github.com/dorrianweber/project2/blob/main/public/images/sleep.jpg?raw=true"
             alt="sleeping"
           />
@@ -48,8 +48,8 @@ function Homepage() {
           <img
             className="healthy"
             id="image3"
-            onmouseover="setNewImage3()"
-            onmouseout="setOldImage3()"
+            onMouseOver="setNewImage3()"
+            onMouseOut="setOldImage3()"
             src="https://github.com/dorrianweber/project2/blob/main/public/images/caloriesGraph.jpg?raw=true"
             alt="healthy habits"
           />
