@@ -1,6 +1,10 @@
 import React from "react";
+import { useAuthState } from "./App"
+
 
 function Header() {
+    const [state, dispatch] = useAuthState()
+
   return (
     <div>
       <header className="display-flex justify-space-between align-center p-2">
@@ -11,17 +15,15 @@ function Header() {
         </h1>
         <hr />
         <nav className="topnav">
-          {/* Conditionally render login or logout links */}
-          {/* {{#if logged_in}} */}
+          {!state.isAuthenticated ? <div><button onClick={() => dispatch({type: "LOGIN"})}>Login</button></div> : 
+          <div>
           <a href="/">Home</a>
           <a href="/profile">Profile</a>
           <a href="/form">Log your habits</a>
           <a href="/logout" className="no-button" id="logout">
             Logout
           </a>
-          {/* {{else}} */}
-          {/* <a href="/login">Login</a>
-                {{/if}} */}
+          </div>}
         </nav>
         <hr />
       </header>
