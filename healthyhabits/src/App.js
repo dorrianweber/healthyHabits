@@ -1,6 +1,6 @@
-import React, {useReducer, reducer } from "react";
+import React, { useReducer } from "react";
 import AppRouter from "./router";
-import AuthProvider from "./utils/state"
+import AuthProvider, { reducer } from "./utils/state"
 import Header from "./components/header";
 
 
