@@ -1,9 +1,9 @@
 import React from "react";
-import { useAuthState } from "./App"
+import { useAuthState } from "../utils/state"
 
 
 function Header() {
-    const [state, dispatch] = useAuthState()
+    const state = useAuthState()
 
   return (
     <div>
@@ -15,9 +15,9 @@ function Header() {
         </h1>
         <hr />
         <nav className="topnav">
-          {!state.isAuthenticated ? <div><button onClick={() => dispatch({type: "LOGIN"})}>Login</button></div> : 
+            <a href="/">Home</a>
+          {!state.isAuthenticated ? <div><a href={"/login"}>Login</a></div> : 
           <div>
-          <a href="/">Home</a>
           <a href="/profile">Profile</a>
           <a href="/form">Log your habits</a>
           <a href="/logout" className="no-button" id="logout">
