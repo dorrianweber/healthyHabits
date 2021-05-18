@@ -11,9 +11,7 @@ function Header() {
         className="display-flex justify-space-between align-center p-2"
       >
         <h1>
-          <a className="title" href="/">
-            Healthy Habits!
-          </a>
+          <a className="title">Healthy Habits!</a>
         </h1>
         <hr />
         <nav className="topnav">
