@@ -1,6 +1,7 @@
 import React from "react";
 // import EatingForm from "../components/EatingForm";
-import SleepingForm from "../components/SleepingForm"
+// import SleepingForm from "../components/SleepingForm";
+import SpendingForm from "../components/SpendingForm";
 
 function Form() {
     return (
@@ -19,7 +20,7 @@ function Form() {
 
             </form>
 
-            <SleepingForm />
+            <SpendingForm />
         </div>
     );
 };
