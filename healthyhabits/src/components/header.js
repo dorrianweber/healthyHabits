@@ -1,13 +1,15 @@
 import React from "react";
-import { useAuthState } from "../utils/state"
-
+import { useAuthState } from "../utils/state";
 
 function Header() {
-    const state = useAuthState()
+  const state = useAuthState();
 
   return (
     <div>
-      <header className="display-flex justify-space-between align-center p-2">
+      <header
+        id="header"
+        className="display-flex justify-space-between align-center p-2"
+      >
         <h1>
           <a className="title" href="/">
             Healthy Habits!
@@ -15,15 +17,22 @@ function Header() {
         </h1>
         <hr />
         <nav className="topnav">
-            <a href="/">Home</a>
-          {!state.isAuthenticated ? <div><a href={"/login"}>Login</a></div> : 
-          <div>
-          <a href="/profile">Profile</a>
-          <a href="/form">Log your habits</a>
-          <a href="/logout" className="no-button" id="logout">
-            Logout
+          <a className="home" href="/">
+            Home
           </a>
-          </div>}
+          {!state.isAuthenticated ? (
+            <div>
+              <a href={"/login"}>Login</a>
+            </div>
+          ) : (
+            <div>
+              <a href="/profile">Profile</a>
+              <a href="/form">Log your habits</a>
+              <a href="/logout" className="no-button" id="logout">
+                Logout
+              </a>
+            </div>
+          )}
         </nav>
         <hr />
       </header>

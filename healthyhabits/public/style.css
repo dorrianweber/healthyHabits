@@ -1,9 +1,18 @@
 header {
   /* padding: 30px; */
   text-align: center;
-  background-color: skyblue;
+
   padding-top: 20px;
   width: 100%;
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(25, 37, 204),
+    rgb(32, 130, 163),
+    white,
+    rgb(32, 130, 163),
+    rgb(25, 37, 204)
+  );
 }
 
 header h1 {
@@ -35,7 +44,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+
   width: auto;
 }
 
@@ -232,4 +241,8 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.welcome {
+  background-color: black;
 }
