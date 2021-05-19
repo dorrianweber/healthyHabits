@@ -8,17 +8,17 @@ function EatingForm() {
         <div>
             <form className="form eating-form">
 
-                <label for="date">Date:</label>
+                <label htmlFor="date">Date:</label>
                 <input className="form-input" type="date" id="date" />
 
                 <br />
 
-                <label for="food_name">Food name:</label>
+                <label htmlFor="food_name">Food name:</label>
                 <input className="form-input" type="text" id="food_name" />
 
                 <br />
 
-                <label for="meal_type">Meal Type:</label>
+                <label htmlFor="meal_type">Meal Type:</label>
                 <select name="meal_type" id="meal_type">
                     <option value="Breakfast">Breakfast</option>
                     <option value="Lunch">Lunch</option>
@@ -30,22 +30,22 @@ function EatingForm() {
 
                 <p>Nutritional info:</p>
 
-                <label for="calories">Calories:</label>
+                <label htmlFor="calories">Calories:</label>
                 <input className="form-input" type="number" id="calories" />
 
                 <br />
 
-                <label for="protein">Protein (g):</label>
+                <label htmlFor="protein">Protein (g):</label>
                 <input className="form-input" type="number" id="protein" />
 
                 <br />
 
-                <label for="fat">Fat (g):</label>
+                <label htmlFor="fat">Fat (g):</label>
                 <input className="form-input" type="number" id="fat" />
 
                 <br />
 
-                <label for="carbs">Carbs (g):</label>
+                <label htmlFor="carbs">Carbs (g):</label>
                 <input className="form-input" type="number" id="carbs" />
 
                 <br />
