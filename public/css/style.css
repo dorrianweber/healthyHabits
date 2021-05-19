@@ -76,7 +76,6 @@ div.welcome {
 
 .column {
   flex: 25%;
-
   color: blue;
   font-size: medium;
   border: solid skyblue;
@@ -88,6 +87,7 @@ div.welcome {
 img.healthy {
   height: 90%;
   width: 90%;
+  margin: 15px;
   position: relative;
   /* animation: mymove 8s infinite; */
 }
