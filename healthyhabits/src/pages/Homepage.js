@@ -18,46 +18,39 @@ function Homepage() {
       </div>
 
       <div className="row2">
-        <div className="column">
+        <div className="col-4">
           <h3>Nutrition</h3>
           <img
             className="healthy"
             id="image1"
-            // onMouseOver="setNewImage1()"
-            // onMouseOut="setOldImage1()"
             src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/eatingSymbol.png?raw=true"
             alt="Fork and knife with plate"
           />
         </div>
-        <div className="column">
+        <div className="col-4">
           <h3>Spending</h3>
           <img
             className="healthy"
-            id="image4"
+            id="image2"
             src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/spendingSymbol.png?raw=true"
             alt="Stack of cash"
           />
         </div>
-        <div className="column">
+        <div className="col-4">
           <h3>Sleeping</h3>
           <img
             className="healthy"
-            id="image2"
-            // onMouseOver="setNewImage2()"
-            // onMouseOut="setOldImage2()"
+            id="image3"
             src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/sleepingSymbol.png?raw=true"
             alt="Person sleeping in bed"
           />
         </div>
-        <div className="column">
+        <div className="col-4">
           <h3>Track your progress</h3>
           <img
             className="healthy"
-            id="image3"
-            // onMouseOver="setNewImage3()"
-            // onMouseOut="setOldImage3()"
+            id="image4"
             src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
-            src="./"
             alt="Bar and line graphs"
           />
         </div>

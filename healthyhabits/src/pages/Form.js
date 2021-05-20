@@ -2,34 +2,55 @@ import React from "react";
 import EatingForm from "../components/EatingForm";
 import SleepingForm from "../components/SleepingForm";
 import SpendingForm from "../components/SpendingForm";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
 
 // !!!!!!!!!!!!!!!!!!!!!!
 function Form() {
+
+    const [showEating, setShowEating] = React.useState(false)
+    const [showSleeping, setShowSleeping] = React.useState(false)
+    const [showSpending, setShowSpending] = React.useState(false)
+
+    const handleShowEating = () => {
+        setShowEating(true);
+        setShowSleeping(false);
+        setShowSpending(false);
+    };
+
+    const handleShowSleeping = () => {
+        setShowEating(false);
+        setShowSleeping(true);
+        setShowSpending(false);
+    };
+
+    const handleShowSpending = () => {
+        setShowEating(false);
+        setShowSleeping(false);
+        setShowSpending(true);
+    };
+
     return (
-        <div>
-            <form class="form habit-form" onsubmit={(e) => {
-                e.preventdefault();
-
-                const selection = document.querySelector("#categories").value;
-
+        <>
+            <form className="form habit-form" onSubmit={(e) => {
+                e.preventDefault();
+                var selection = document.querySelector("#categories").value;
                 switch (selection) {
                     case "eating":
-                        <EatingForm />
+                        handleShowEating();
                         break;
                     case "sleeping":
-                        <SleepingForm />
+                        handleShowSleeping();
                         break;
                     case "spending":
-                        <SpendingForm />
+                        handleShowSpending();
                         break;
-
                     default:
                         break;
                 };
 
             }}>
-                <label for="categories">Choose a category:</label>
+                <label htmlFor="categories">Choose a category:</label>
                 <select name="categories" id="categories">
                     <option value="eating">Eating</option>
                     <option value="sleeping">Sleeping</option>
@@ -38,26 +59,17 @@ function Form() {
 
                 <br />
 
-                <button class="btn btn-primary" id="category-next" type="submit">Next</button>
+                <button className="btn btn-primary" id="category-next" type="submit">Next</button>
 
             </form>
+            
+            <div id="formSpot">
+            {showEating && <EatingForm />}
+            {showSleeping && <SleepingForm />}
+            {showSpending && <SpendingForm />}
+            </div>
+            </>
 
-            <Router>
-                <div>
-                    <Switch>
-                        <Route path={"/eating"}>
-                            <EatingForm />
-                        </Route>
-                        <Route path={"/sleeping"}>
-                            <SleepingForm />
-                        </Route>
-                        <Route path={"/spending"}>
-                            <SpendingForm />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        </div>
     );
 };
 
