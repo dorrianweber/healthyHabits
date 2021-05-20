@@ -3,9 +3,6 @@ import EatingForm from "../components/EatingForm";
 import SleepingForm from "../components/SleepingForm";
 import SpendingForm from "../components/SpendingForm";
 
-
-
-// !!!!!!!!!!!!!!!!!!!!!!
 function Form() {
 
     const [showEating, setShowEating] = React.useState(false)
@@ -62,13 +59,13 @@ function Form() {
                 <button className="btn btn-primary" id="category-next" type="submit">Next</button>
 
             </form>
-            
+
             <div id="formSpot">
-            {showEating && <EatingForm />}
-            {showSleeping && <SleepingForm />}
-            {showSpending && <SpendingForm />}
+                {showEating && <EatingForm />}
+                {showSleeping && <SleepingForm />}
+                {showSpending && <SpendingForm />}
             </div>
-            </>
+        </>
 
     );
 };
