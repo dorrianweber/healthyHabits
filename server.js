@@ -1,5 +1,3 @@
-// COPIED FROM 14-MVC/01-Activities/28-Stu_Mini-Project
-
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
