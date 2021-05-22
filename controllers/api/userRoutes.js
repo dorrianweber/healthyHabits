@@ -20,8 +20,9 @@ router.post("/", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
+    console.log("attempting login")
     const userData = await User.findOne({ where: { email: req.body.email } });
-
+console.log("found user")
     if (!userData) {
       res
         .status(400)

@@ -11,7 +11,14 @@ const oauth2Client = new OAuth2(
 oauth2Client.setCredentials({
   refresh_token: process.env.refresh_token,
 });
+
 const accessToken = oauth2Client.getAccessToken();
+
+console.log("------------------------------------------------------------------------------------------------")
+console.log("------------------------------------------------------------------------------------------------")
+console.log(accessToken);
+console.log("------------------------------------------------------------------------------------------------")
+console.log("------------------------------------------------------------------------------------------------")
 
 const mailer = (userData) => {
   const smtpTransport = nodemailer.createTransport({
@@ -42,4 +49,6 @@ const mailer = (userData) => {
     smtpTransport.close();
   });
 };
+
+
 module.exports = mailer;
