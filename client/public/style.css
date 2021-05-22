@@ -6,17 +6,10 @@ header {
   width: 100%;
 
   background-image: linear-gradient(
-    to top right,
+    to bottom left,
     rgb(25, 37, 204),
-<<<<<<< HEAD
-    skyblue,
-    white,
-    skyblue,
-    rgb(25, 37, 204)
-=======
     rgb(32, 89, 163),
     rgb(82, 167, 196)
->>>>>>> 1bc363c902921b106d308d11cc75e2cae2030f00
   );
 }
 
@@ -253,5 +246,5 @@ input {
 }
 
 .title {
-  color: rgb(4, 4, 80);
+  color: white;
 }

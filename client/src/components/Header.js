@@ -10,15 +10,8 @@ function Header() {
         id="header"
         className="display-flex justify-space-between align-center p-2"
       >
-<<<<<<< HEAD
-        <h1>
-          <a className="title">Healthy Habits!</a>
-        </h1>
-=======
-
         <h1 className="title">Healthy Habits!</h1>
 
->>>>>>> 1bc363c902921b106d308d11cc75e2cae2030f00
         <hr />
         <nav className="topnav">
           <a className="home" href="/">
@@ -42,6 +35,6 @@ function Header() {
       </header>
     </div>
   );
-};
+}
 
 export default Header;
