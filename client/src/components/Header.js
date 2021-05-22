@@ -1,12 +1,15 @@
 import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuthState } from "../utils/state";
+import { useHistory } from "react-router-dom";
 
 function Header() {
+  let history = useHistory()
   const [state, dispatch] = useAuthState()
   const handleLogout = () => {
-    dispatch({type: "LOGOUT"})
-  }
+    dispatch({type: "LOGOUT"});
+    history.push('/');
+  };
 
   console.log(state)
   return (

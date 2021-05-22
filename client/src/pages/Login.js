@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuthState } from "../utils/state"
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 
 function Login() {
-  const [state, dispatch] = useAuthState();
-
-  const [userState, setState] = useState({
-    email: "",
-    password: "",
-  });
+    let history = useHistory()
+    const [state, dispatch] = useAuthState()
 
   const onChange = (e) => {
     setState({ ...userState, [e.target.name]: e.target.value });
@@ -49,6 +46,7 @@ function Login() {
                 dispatch({type: "LOGIN",
                         payload: {user: response.data.user.email}  });
                         console.log(state)
+                        history.push('/profile')
             } else {
                 alert(response.statusText);
             }
