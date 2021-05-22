@@ -9,7 +9,6 @@
     "chart.js": "^2.9.4",
     "concurrently": "^6.1.0",
     "connect-session-sequelize": "^7.1.1",
-    "concurrently": "^4.1.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
@@ -18,12 +17,9 @@
     "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
     "nodemailer": "^6.6.0",
+    "nodemon": "^2.0.7",
     "sequelize": "^6.6.2"
   },
-  "name": "project2",
-  "description": "fix yoself",
-  "version": "1.0.0",
-  "main": "server.js",
   "devDependencies": {},
   "scripts": {
     "seed": "node seeds/seed.js",

@@ -2,16 +2,21 @@ header {
   /* padding: 30px; */
   text-align: center;
 
-  padding-top: 20px;
+  padding-top: 5px;
   width: 100%;
 
   background-image: linear-gradient(
     to top right,
     rgb(25, 37, 204),
+<<<<<<< HEAD
     skyblue,
     white,
     skyblue,
     rgb(25, 37, 204)
+=======
+    rgb(32, 89, 163),
+    rgb(82, 167, 196)
+>>>>>>> 1bc363c902921b106d308d11cc75e2cae2030f00
   );
 }
 
@@ -95,11 +100,15 @@ div.welcome {
 }
 
 img.healthy {
-  height: 90%;
-  width: 90%;
+  padding-left: 25%;
+  padding-right: 25%;
   position: relative;
-  /* animation: mymove 8s infinite; */
 }
+
+.imgHeader {
+  text-align: center;
+}
+
 /* Profile charts */
 .row3 {
   display: flex;
