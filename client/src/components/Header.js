@@ -10,11 +10,9 @@ function Header() {
         id="header"
         className="display-flex justify-space-between align-center p-2"
       >
-        <h1>
-          <a className="title" href="/">
-            Healthy Habits!
-          </a>
-        </h1>
+
+        <h1 className="title">Healthy Habits!</h1>
+
         <hr />
         <nav className="topnav">
           <a className="home" href="/">
