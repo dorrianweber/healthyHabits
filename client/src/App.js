@@ -5,7 +5,6 @@ import AuthProvider, { reducer } from "./utils/state"
 
 
 function App() {
-
   const [state, dispatch] = useReducer(reducer, []);
   return (
     <div className="App">
