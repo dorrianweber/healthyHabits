@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuthState } from "../utils/state"
+import { Redirect } from "react-router-dom";
 
 function Login() {
 
@@ -26,10 +27,10 @@ function Login() {
             console.log(response);
 
             if (response.status === 200) {
-                // document.location.replace("/profile");
                 console.log("success!");
                 dispatch({type: "LOGIN",
-                        payload: {user: userState}  });
+                        payload: {user: response.data.user.email}  });
+                        console.log(state)
             } else {
                 alert(response.statusText);
             }

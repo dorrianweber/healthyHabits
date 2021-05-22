@@ -1,34 +1,42 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { useAuthState } from "../utils/state";
 
 function Header() {
-  const state = useAuthState();
+  const [state, dispatch] = useAuthState()
+  const handleLogout = () => {
+    dispatch({type: "LOGOUT"})
+  }
 
+  console.log(state)
   return (
+
     <div>
       <header
         id="header"
         className="display-flex justify-space-between align-center p-2"
       >
-
-        <h1 className="title">Healthy Habits!</h1>
-
+        <h1>
+            Healthy Habits!
+        </h1>
         <hr />
         <nav className="topnav">
-          <a className="home" href="/">
+          <NavLink className="home" to="/">
             Home
-          </a>
+          </NavLink>
           {!state.isAuthenticated ? (
             <div>
-              <a href={"/login"}>Login</a>
+              <NavLink to={"/login"}>
+                Login
+              </NavLink>
             </div>
           ) : (
             <div>
-              <a href="/profile">Profile</a>
-              <a href="/form">Log your habits</a>
-              <a href="/logout" className="no-button" id="logout">
+              <NavLink to="/profile">Profile</NavLink>
+              <NavLink to="/form">Log your habits</NavLink>
+              <button onClick={handleLogout} className="no-button" id="logout">
                 Logout
-              </a>
+              </button>
             </div>
           )}
         </nav>
