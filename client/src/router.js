@@ -5,10 +5,14 @@ import Profile from "./pages/Profile";
 import Form from "./pages/Form";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
 
 function AppRouter () {
     return (
         <Router>
+            <header className="App-header">
+          <Header />
+        </header>
         <div>
         <Switch>
             <Route exact path={"/"}>
