@@ -1,38 +1,43 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useAuthState } from "../utils/state"
 
 function Login() {
 
-    const [state, setState] = useState({
+    const [state, dispatch] = useAuthState()
+
+    const [userState, setState] = useState({
         email: "",
         password: ""
     });
 
     const onChange = (e) => {
-        setState({ ...state, [e.target.name]: e.target.value });
+        setState({ ...userState, [e.target.name]: e.target.value });
     };
 
     const loginFormHandler = async (event) => {
         event.preventDefault();
 
-        if (state.email && state.password) {
+        if (userState.email && userState.password) {
             const response = await axios.post("/api/users/login", {
-                method: "POST",
-                body: JSON.stringify({ email: state.email, password: state.password }),
-                headers: { "Content-Type": "application/json" },
+            email: userState.email, password: userState.password 
             });
 
             console.log(response);
 
-            if (response.ok) {
+            if (response.status === 200) {
                 // document.location.replace("/profile");
                 console.log("success!");
+                dispatch({type: "LOGIN",
+                        payload: {user: userState}  });
             } else {
                 alert(response.statusText);
             }
         }
     };
-
+React.useEffect(() => {
+    console.log(state)
+}, [state])
     return (
         <div className="row" id="loginpic">
             <br />

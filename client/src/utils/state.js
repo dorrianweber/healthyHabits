@@ -18,12 +18,12 @@ const AuthState = React.createContext({
     switch (action.type) {
       case "LOGIN":
         localStorage.setItem("user", JSON.stringify(action.payload.user));
-        localStorage.setItem("token", JSON.stringify(action.payload.token));
+        // localStorage.setItem("token", JSON.stringify(action.payload.token));
         return {
           ...state,
           isAuthenticated: true,
           user: action.payload.user,
-          token: action.payload.token
+          // token: action.payload.token
         };
       case "LOGOUT":
         localStorage.clear();
@@ -31,9 +31,10 @@ const AuthState = React.createContext({
           ...state,
           isAuthenticated: false,
           user: null,
-          token: null
+          // token: null
         };
       default:
         return state;
     };
   };
+
