@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useAuthState } from "../utils/state";
+import { useAuthState } from "../utils/state"
+import { Redirect } from "react-router-dom";
 
 function Login() {
   const [state, dispatch] = useAuthState();
@@ -43,33 +44,24 @@ function Login() {
       <div className="col-md-6">
         <h2>Login</h2>
 
-        <form className="form login-form" onSubmit={(e) => loginFormHandler(e)}>
-          <div className="form-group">
-            <label for="email-login">E-mail:</label>
-            <input
-              className="form-input"
-              type="text"
-              id="email-login"
-              name="email"
-              onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <label for="password-login">Password:</label>
-            <input
-              className="form-input"
-              type="password"
-              id="password-login"
-              name="password"
-              onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <button className="btn btn-primary" type="submit">
-              Login
-            </button>
-          </div>
-        </form>
+            if (response.status === 200) {
+                console.log("success!");
+                dispatch({type: "LOGIN",
+                        payload: {user: response.data.user.email}  });
+                        console.log(state)
+            } else {
+                alert(response.statusText);
+            }
+        }
+    };
+React.useEffect(() => {
+    console.log(state)
+}, [state])
+    return (
+        <div className="row" id="loginpic">
+            <br />
+            <div className="col-md-6">
+                <h2>Login</h2>
 
         <br />
         {/* <div className="col-md-6">
