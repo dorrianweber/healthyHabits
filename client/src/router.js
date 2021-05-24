@@ -3,6 +3,7 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Form from "./pages/Form";
+import About from "./pages/About";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
@@ -27,6 +28,9 @@ function AppRouter() {
           </Route>
           <Route path={"/form"}>
             <Form />
+          </Route>
+          <Route>
+            <About />
           </Route>
           <Route>
             <NoMatch />
