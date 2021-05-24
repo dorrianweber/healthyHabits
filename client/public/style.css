@@ -6,7 +6,7 @@ header {
   width: 100%;
 
   background-image: linear-gradient(
-    to bottom right,
+    to bottom left,
     rgb(25, 37, 204),
     rgb(32, 89, 163),
     rgb(82, 167, 196)
@@ -49,7 +49,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -245,6 +245,6 @@ input {
   position: relative;
 }
 
-.welcome {
-  background-color: black;
+.title {
+  color: white;
 }
