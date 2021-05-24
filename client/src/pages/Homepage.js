@@ -7,7 +7,7 @@ import Media from "react-bootstrap/Media";
 
 function Homepage() {
   return (
-    <Container>
+    <Container className="container-flex">
       <div className="row align-center mb-5">
         <div className="welcome">
           <h2>Take control of your life</h2>
@@ -69,7 +69,7 @@ function Homepage() {
           </Row>
         </Media>
         <hr />
-        <Container className="container-fluid">
+        <Container className="container-flex">
           <Row
             style={{
               color: "black",
@@ -77,8 +77,8 @@ function Homepage() {
               backgroundImage:
                 "url(https://wallpaperaccess.com/full/1236557.jpg)",
               backgroundRepeat: "none",
-
-              alignContent: "center",
+              display: "flex",
+              alignItems: "center",
             }}
           >
             <Col md={4}>
@@ -137,32 +137,15 @@ function Homepage() {
             </Col>
           </Row>
           <Row
-            className="container-fluid"
             style={{
               color: "black",
               padding: "40px",
-
-              alignContent: "center",
+              display: "flex",
+              width: "100%",
+              alignItems: "center",
             }}
           >
-            <Col md={4}></Col>
-            <Col md={4}>
-              <img
-                id="image2"
-                src="https://u2msxm5fmf-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/Average-Spending-At-Starbucks.jpg"
-                alt="Stack of cash"
-                className="img-thumbnail"
-                style={{
-                  borderRadius: "4px",
-                  padding: "20px",
-                  height: "350px",
-                  width: "350px",
-                  float: "right",
-                }}
-              />
-            </Col>
-
-            <Col md={4} style={{ textAlign: "right" }}>
+            <Col md={8} style={{ textAlign: "right" }}>
               <h2>Spending habits:</h2>
               <p>
                 <ul style={{ listStyleType: "none" }}>
@@ -203,6 +186,22 @@ function Homepage() {
                 </ul>
               </p>
             </Col>
+
+            <Col>
+              <img
+                id="image2"
+                src="https://u2msxm5fmf-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/Average-Spending-At-Starbucks.jpg"
+                alt="Stack of cash"
+                className="img-thumbnail"
+                style={{
+                  borderRadius: "4px",
+                  padding: "20px",
+                  height: "350px",
+                  width: "350px",
+                  float: "inline-end",
+                }}
+              />
+            </Col>
           </Row>
 
           {/* <Row md={4}>
@@ -228,14 +227,14 @@ function Homepage() {
           </Row> */}
         </Container>
       </div>
-      {/* <Media>
+      <Media>
         <img
           className="mr-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/spendingSymbol.png?raw=true"
+          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/sleepingSymbol.png?raw=true"
           alt="Generic placeholder"
         />
         <Media.Body>
-          <h3>Media Heading</h3>
+          <h3>Sleeping</h3>
           <p>
             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
             scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
@@ -243,7 +242,34 @@ function Homepage() {
             nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           </p>
         </Media.Body>
-      </Media> */}
+      </Media>
+      <Media>
+        <img
+          className="ml-3"
+          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
+          alt="Generic placeholder"
+        />
+        <img
+          className="ml-3"
+          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
+          alt="Generic placeholder"
+        />
+        <img
+          className="ml-3"
+          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
+          alt="Generic placeholder"
+        />
+        <Media.Body>
+          <h3>Tracking habits</h3>
+          <p>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+            scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
+            in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+            nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </p>
+        </Media.Body>
+      </Media>
+      <br />
     </Container>
   );
 }
