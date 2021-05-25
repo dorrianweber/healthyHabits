@@ -24,6 +24,7 @@ function Header() {
           <NavLink className="home" to="/">
             Home
           </NavLink>
+          <NavLink to="/about">About us</NavLink>
           {!state.isAuthenticated ? (
             <div>
               <NavLink to={"/login"}>Login</NavLink>
@@ -32,6 +33,7 @@ function Header() {
             <div>
               <NavLink to="/profile">Profile</NavLink>
               <NavLink to="/form">Log your habits</NavLink>
+
               <button onClick={handleLogout} className="no-button" id="logout">
                 Logout
               </button>
