@@ -3,6 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div>
+      <br />
       <footer>
         Thank you for visiting!
         <br />
@@ -10,7 +11,7 @@ function Footer() {
           <a href="/About" style={{ marginLeft: "10px", marginRight: "10px" }}>
             About us!
           </a>
-          <a href="/">Contact us.</a>
+          <a href="mailto:healthyhabitsapp123@gmail.com">Contact us.</a>
         </div>
         <hr />
         <div>
@@ -24,8 +25,6 @@ function Footer() {
           </p>
         </div>
       </footer>
-
-      <hr />
     </div>
   );
 }

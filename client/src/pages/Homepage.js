@@ -57,7 +57,7 @@ function Homepage() {
         {/* Start of new section */}
         <Media>
           <Row className="row">
-            <Col md={6} className="col-md-6">
+            <Col md={12}>
               <Media.Body>
                 <p style={{ color: "blue", textAlign: "center" }}>
                   "You'll never change your life until you change something you
@@ -69,14 +69,20 @@ function Homepage() {
           </Row>
         </Media>
         <hr />
-        <Container className="container-flex">
+        <Container
+          // className="container-flex"
+          style={{
+            backgroundImage:
+              "url(http://www.seekgif.com/uploads/blue-and-white-vector-background-4.jpeg)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
           <Row
             style={{
               color: "black",
-              padding: "40px",
-              backgroundImage:
-                "url(https://wallpaperaccess.com/full/1236557.jpg)",
-              backgroundRepeat: "none",
+              padding: "20px",
+
               display: "flex",
               alignItems: "center",
             }}
@@ -90,12 +96,11 @@ function Homepage() {
                   borderRadius: "4px",
                   padding: "10px",
                   width: "400px",
-                  float: "left",
                 }}
               />
             </Col>
 
-            <Col md={4}>
+            <Col md={8}>
               <h2>Nutrition facts:</h2>
               <p>
                 <ul style={{ listStyleType: "none" }}>
@@ -187,7 +192,7 @@ function Homepage() {
               </p>
             </Col>
 
-            <Col>
+            <Col ml={4}>
               <img
                 id="image2"
                 src="https://u2msxm5fmf-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/Average-Spending-At-Starbucks.jpg"
@@ -203,28 +208,70 @@ function Homepage() {
               />
             </Col>
           </Row>
+          <Row
+            style={{
+              color: "black",
+              padding: "20px",
 
-          {/* <Row md={4}>
-            <Col md={3}></Col>
-            <Col md={3}>
-              <h3 className="imgHeader">Sleeping</h3>
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Col md={4}>
               <img
-                className="healthy"
-                id="image3"
-                src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/sleepingSymbol.png?raw=true"
-                alt="Person sleeping in bed"
+                src="https://domf5oio6qrcr.cloudfront.net/medialibrary/10175/GettyImages-183148836.jpg"
+                alt="image1"
+                className="img-thumbnail"
+                style={{
+                  borderRadius: "4px",
+                  padding: "10px",
+                  width: "200px",
+                }}
               />
             </Col>
-            <Row>
-              <h3 className="imgHeader">Track your progress</h3>
-              <img
-                className="healthy"
-                id="image4"
-                src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
-                alt="Bar and line graphs"
-              />
-            </Row>
-          </Row> */}
+
+            <Col md={8}>
+              <h2>Sleeping facts:</h2>
+              <p>
+                <ul style={{ listStyleType: "none" }}>
+                  <li>
+                    <h4>Poor sleep is linked to higher body weight</h4>
+                  </li>
+                  <li>
+                    <h4>
+                      A good night’s sleep is incredibly important for your
+                      health.
+                    </h4>
+                    <ul style={{ listStyleType: "none" }}>
+                      <li>
+                        Poor sleep affects hormones that regulate appetite.
+                      </li>
+                      <li>
+                        Sleep has been shown to enhance athletic performance.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>
+                      If you’re trying to lose weight, getting quality sleep is
+                      absolutely crucial
+                    </h4>
+
+                    <ul style={{ listStyleType: "none" }}>
+                      <li>
+                        Along with nutrition and exercise, good sleep is one of
+                        the pillars of health.
+                      </li>
+                      <li style={{ color: "blue" }}>
+                        You simply cannot achieve optimal health without taking
+                        care of your sleep.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </p>
+            </Col>
+          </Row>
         </Container>
       </div>
       <Media>

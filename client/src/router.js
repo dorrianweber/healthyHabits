@@ -36,6 +36,7 @@ function AppRouter() {
             <NoMatch />
           </Route>
         </Switch>
+        <br />
         <Footer />
       </div>
     </Router>
