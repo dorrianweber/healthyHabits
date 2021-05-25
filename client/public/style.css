@@ -6,7 +6,7 @@ header {
   width: 100%;
 
   background-image: linear-gradient(
-    to bottom right,
+    to bottom left,
     rgb(25, 37, 204),
     rgb(32, 89, 163),
     rgb(82, 167, 196)
@@ -23,6 +23,8 @@ body {
   padding: 10px;
   height: auto;
   background-color: white;
+  position: relative;
+  min-height: 100vh;
 }
 
 .quotes {
@@ -49,7 +51,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -166,12 +168,17 @@ div.graph {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: skyblue;
-  color: black;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(25, 37, 204),
+    rgb(32, 89, 163),
+    rgb(82, 167, 196)
+  );
+  color: white;
   text-align: center;
   padding: 10px;
 }
@@ -245,6 +252,6 @@ input {
   position: relative;
 }
 
-.welcome {
-  background-color: black;
+.title {
+  color: white;
 }

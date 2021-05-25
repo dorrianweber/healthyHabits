@@ -4,24 +4,21 @@ import { useAuthState } from "../utils/state";
 import { useHistory } from "react-router-dom";
 
 function Header() {
-  let history = useHistory()
-  const [state, dispatch] = useAuthState()
+  let history = useHistory();
+  const [state, dispatch] = useAuthState();
   const handleLogout = () => {
-    dispatch({type: "LOGOUT"});
-    history.push('/');
+    dispatch({ type: "LOGOUT" });
+    history.push("/");
   };
 
-  console.log(state)
+  console.log(state);
   return (
-
     <div>
       <header
         id="header"
         className="display-flex justify-space-between align-center p-2"
       >
-        <h1>
-            Healthy Habits!
-        </h1>
+        <h1>Healthy Habits!</h1>
         <hr />
         <nav className="topnav">
           <NavLink className="home" to="/">
@@ -29,9 +26,7 @@ function Header() {
           </NavLink>
           {!state.isAuthenticated ? (
             <div>
-              <NavLink to={"/login"}>
-                Login
-              </NavLink>
+              <NavLink to={"/login"}>Login</NavLink>
             </div>
           ) : (
             <div>
@@ -47,6 +42,6 @@ function Header() {
       </header>
     </div>
   );
-};
+}
 
 export default Header;

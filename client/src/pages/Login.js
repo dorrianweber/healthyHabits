@@ -79,7 +79,7 @@ function Login() {
 
         <br />
         {/* <div className="col-md-6">
-                </div> */}
+              </div> */}
         <br />
         <div className="col-md-6">
           <h2>Sign Up</h2>
