@@ -1,69 +1,70 @@
 import React from "react";
 import { useAuthState } from "../utils/state";
+import "./eating.css";
 
 function EatingForm() {
-    const state = useAuthState();
+  const state = useAuthState();
 
-    return (
-        <div>
-            <form className="form eating-form">
+  return (
+    <div className="row">
+      <div className="col-md-6">
+        <form className="form eating-form">
+          <label htmlFor="date">Date:</label>
+          <input className="form-input" type="date" id="date" />
 
-                <label htmlFor="date">Date:</label>
-                <input className="form-input" type="date" id="date" />
+          <br />
 
-                <br />
+          <label htmlFor="food_name">Food name:</label>
+          <input className="form-input" type="text" id="food_name" />
 
-                <label htmlFor="food_name">Food name:</label>
-                <input className="form-input" type="text" id="food_name" />
+          <br />
 
-                <br />
+          <label htmlFor="meal_type">Meal Type:</label>
+          <select name="meal_type" id="meal_type">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+          </select>
 
-                <label htmlFor="meal_type">Meal Type:</label>
-                <select name="meal_type" id="meal_type">
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                    <option value="Snack">Snack</option>
-                </select>
+          <br />
 
-                <br />
+          <p>Nutritional info:</p>
 
-                <p>Nutritional info:</p>
+          <label htmlFor="calories">Calories:</label>
+          <input className="form-input" type="number" id="calories" />
 
-                <label htmlFor="calories">Calories:</label>
-                <input className="form-input" type="number" id="calories" />
+          <br />
 
-                <br />
+          <label htmlFor="protein">Protein (g):</label>
+          <input className="form-input" type="number" id="protein" />
 
-                <label htmlFor="protein">Protein (g):</label>
-                <input className="form-input" type="number" id="protein" />
+          <br />
 
-                <br />
+          <label htmlFor="fat">Fat (g):</label>
+          <input className="form-input" type="number" id="fat" />
 
-                <label htmlFor="fat">Fat (g):</label>
-                <input className="form-input" type="number" id="fat" />
+          <br />
 
-                <br />
+          <label htmlFor="carbs">Carbs (g):</label>
+          <input className="form-input" type="number" id="carbs" />
 
-                <label htmlFor="carbs">Carbs (g):</label>
-                <input className="form-input" type="number" id="carbs" />
+          <br />
 
-                <br />
-
-                <button className="btn btn-primary" id="eatingSubmit" type="submit">Submit</button>
-
-            </form>
-
-            <div className="fancy">
-                <div id="quote">
-
-                </div>
-                <div id="author">
-
-                </div>
-            </div>
+          <button className="btn btn-primary" id="eatingSubmit" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div className="col-md-6">
+        <div className="fancy">
+          <div id="quote"></div>
+          <div id="author"></div>
         </div>
-    );
-};
+      </div>
+      <br />
+    </div>
+  );
+}
 
 export default EatingForm;

@@ -211,7 +211,7 @@ function About() {
                   style={{ padding: "10px" }}
                 />
                 <Card.Body>
-                  <Card.Title>Chris Holmes</Card.Title>
+                  <Card.Title>Petr Constantinov</Card.Title>
                   <Card.Text>Product Support</Card.Text>
                 </Card.Body>
                 <ListGroup

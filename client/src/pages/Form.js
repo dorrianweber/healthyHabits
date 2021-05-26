@@ -46,7 +46,7 @@ function Form() {
   //Note - 10000 milliseconds = 10
 
   return (
-    <>
+    <div className="container-fluid" style={{ paddingBottom: "70px" }}>
       <form
         className="form habit-form"
         onSubmit={(e) => {
@@ -86,7 +86,8 @@ function Form() {
         {showSleeping && <SleepingForm />}
         {showSpending && <SpendingForm />}
       </div>
-    </>
+      <br />
+    </div>
   );
 }
 

@@ -274,22 +274,7 @@ function Homepage() {
           </Row>
         </Container>
       </div>
-      <Media>
-        <img
-          className="mr-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/sleepingSymbol.png?raw=true"
-          alt="Generic placeholder"
-        />
-        <Media.Body>
-          <h3>Sleeping</h3>
-          <p>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-            scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-            in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-            nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </p>
-        </Media.Body>
-      </Media>
+
       <Media>
         <img
           className="ml-3"
