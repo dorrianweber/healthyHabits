@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { useAuthState } from "../utils/state";
 import { useHistory } from "react-router-dom";
 
-
 function Header() {
   let history = useHistory();
   const [state, dispatch] = useAuthState();
@@ -35,7 +34,15 @@ function Header() {
               <NavLink to="/profile">Profile</NavLink>
               <NavLink to="/form">Log your habits</NavLink>
 
-              <button onClick={handleLogout} className="no-button" id="logout">
+              <button
+                onClick={handleLogout}
+                className="no-button"
+                id="logout"
+                // style={{
+                //   backgroundColor: "none",
+                //   border: "none",
+                // }}
+              >
                 Logout
               </button>
             </div>

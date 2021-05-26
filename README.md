@@ -49,6 +49,7 @@ Team members and roles
 Screenshots of working websit
 ![screenshot of working application]()
 ![screenshot of working application]()
+![screenshot of working application]()
 
 GIF of working application:
 
