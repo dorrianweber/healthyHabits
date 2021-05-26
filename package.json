@@ -22,7 +22,6 @@
     "react-bootstrap": "^1.6.0",
     "sequelize": "^6.6.2"
   },
-  "devDependencies": {},
   "scripts": {
     "seed": "node seeds/seed.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

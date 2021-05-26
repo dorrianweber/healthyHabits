@@ -6,6 +6,11 @@ const AuthState = React.createContext({
       user: null,
       token: null,
   });
+  
+if (localStorage.getItem("auth") === "true") {
+
+}
+
   const { Provider } = AuthState;
   export default function AuthProvider({ value = [], ...props }) {
     const [state, dispatch] = useReducer(reducer, []);
@@ -18,6 +23,7 @@ const AuthState = React.createContext({
   export const reducer = (state, action) => {
     switch (action.type) {
       case "LOGIN":
+        localStorage.setItem("auth", true);
         localStorage.setItem("user", JSON.stringify(action.payload.user));
         // localStorage.setItem("token", JSON.stringify(action.payload.token));
         return {
@@ -38,4 +44,5 @@ const AuthState = React.createContext({
         return state;
     };
   };
+
 
