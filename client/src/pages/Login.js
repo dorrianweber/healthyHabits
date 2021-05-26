@@ -115,7 +115,7 @@ function Login() {
         {/* <div className="col-md-6">
               </div> */}
         <br />
-        <div className="col-md-6" style={{ paddingBottom: "60px" }}>
+        <div className="col-md-6">
           <h2>Sign Up</h2>
 
           <form
