@@ -56,7 +56,6 @@ function Login() {
 
         if (response.status === 200) {
           console.log("Account created successfully!");
-          // const mailer = await axios.get("/api/mailerRoutes", {});
           dispatch({
             type: "LOGIN",
             payload: { user: response.data.id },
