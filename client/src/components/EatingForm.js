@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuthState } from "../utils/state";
-import "./eating.css";
 
 function EatingForm() {
   const state = useAuthState();

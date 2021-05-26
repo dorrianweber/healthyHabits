@@ -7,7 +7,7 @@ import Media from "react-bootstrap/Media";
 
 function Homepage() {
   return (
-    <Container className="container-flex">
+    <Container className="container-flex" style={{ paddingBottom: "70px" }}>
       <div className="row align-center mb-5">
         <div className="welcome">
           <h2>Take control of your life</h2>
@@ -276,30 +276,23 @@ function Homepage() {
       </div>
 
       <Media>
-        <img
-          className="ml-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
-          alt="Generic placeholder"
-        />
-        <img
-          className="ml-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
-          alt="Generic placeholder"
-        />
-        <img
-          className="ml-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
-          alt="Generic placeholder"
-        />
         <Media.Body>
           <h3>Tracking habits</h3>
           <p>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-            scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-            in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-            nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            Understanding where you are today can help you plan where you want
+            to go. The old saying, "What get's measured get's done!" applies to
+            your personal life and is the first step in making long lasting
+            healthy habits.
           </p>
+          <p>Sign up for free today!</p>
         </Media.Body>
+
+        <img
+          className="ml-3"
+          src="https://static.businessinsider.com/image/570680c6dd089546168b488d-/image.jpg"
+          alt="junk food"
+          style={{ height: "200px", widht: "200px" }}
+        />
       </Media>
       <br />
     </Container>

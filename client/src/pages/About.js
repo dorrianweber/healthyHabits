@@ -23,6 +23,7 @@ function About() {
                   height: "31rem",
                   background: "lightblue",
                   paddingRight: "10px",
+                  marginRight: "5px",
                 }}
               >
                 <Card.Img
