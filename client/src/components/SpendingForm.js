@@ -2,44 +2,55 @@ import React from "react";
 import { useAuthState } from "../utils/state";
 
 function SpendingForm() {
-    const state = useAuthState();
+  const state = useAuthState();
 
-    return (
-        <div>
-            <form class="form spending-form">
+  return (
+    <div>
+      <form class="form spending-form">
+        <label for="date">Date:</label>
+        <input class="form-input" type="date" id="date" />
 
-                <label for="date">Date:</label>
-                <input class="form-input" type="date" id="date" />
+        <br />
 
-                <br />
+        <label for="restaurant">Restaurant spending ($):</label>
+        <input
+          class="form-input"
+          type="number"
+          id="restaurant"
+          step="0.01"
+          min="0.00"
+        />
 
-                <label for="restaurant">Restaurant spending ($):</label>
-                <input class="form-input" type="number" id="restaurant" step="0.01" min="0.00" />
+        <br />
 
-                <br />
+        <label for="coffee">Coffee spending ($):</label>
+        <input
+          class="form-input"
+          type="number"
+          id="coffee"
+          step="0.01"
+          min="0.00"
+        />
 
-                <label for="coffee">Coffee spending ($):</label>
-                <input class="form-input" type="number" id="coffee" step="0.01" min="0.00" />
+        <br />
 
-                <br />
+        <label for="bar">Bar spending ($):</label>
+        <input
+          class="form-input"
+          type="number"
+          id="bar"
+          step="0.01"
+          min="0.00"
+        />
 
-                <label for="bar">Bar spending ($):</label>
-                <input class="form-input" type="number" id="bar" step="0.01" min="0.00" />
+        <br />
 
-                <br />
-
-                <button class="btn btn-primary" id="spendingSubmit" type="submit">Submit</button>
-            </form>
-            <div class="fancy">
-                <div id="quote">
-
-                </div>
-                <div id="author">
-
-                </div>
-            </div>
-        </div>
-    );
-};
+        <button class="btn btn-primary" id="spendingSubmit" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
 
 export default SpendingForm;
