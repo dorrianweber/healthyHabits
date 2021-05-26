@@ -40,6 +40,40 @@ function Login() {
       }
     }
   };
+
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
+
+    if (userState.name && userState.email && userState.password) {
+      if (userState.password.length >= 8) {
+        const response = await axios.post("/api/users", {
+          name: userState.name,
+          email: userState.email,
+          password: userState.password,
+        });
+
+        console.log(response);
+
+        if (response.status === 200) {
+          console.log("Account created successfully!");
+          // const mailer = await axios.get("/api/mailerRoutes", {});
+          dispatch({
+            type: "LOGIN",
+            payload: { user: response.data.id },
+          });
+          console.log(state);
+          history.push("/profile");
+        } else {
+          alert(response.statusText);
+        }
+      } else {
+        alert("Password must be at least 8 characters");
+      }
+    } else {
+      alert("Please fill out name, email, & password fields");
+    }
+  };
+
   React.useEffect(() => {
     console.log(state);
   }, [state]);
@@ -84,14 +118,29 @@ function Login() {
         <div className="col-md-6" style={{ paddingBottom: "60px" }}>
           <h2>Sign Up</h2>
 
-          <form className="form signup-form">
+          <form
+            className="form signup-form"
+            onSubmit={(e) => signupFormHandler(e)}
+          >
             <div className="form-group">
               <label for="name-signup">Name:</label>
-              <input className="form-input" type="text" id="name-signup" />
+              <input
+                className="form-input"
+                type="text"
+                id="name-signup"
+                name="name"
+                onChange={(e) => onChange(e)}
+              />
             </div>
             <div className="form-group">
               <label for="email-signup">Email:</label>
-              <input className="form-input" type="text" id="email-signup" />
+              <input
+                className="form-input"
+                type="text"
+                id="email-signup"
+                name="email"
+                onChange={(e) => onChange(e)}
+              />
             </div>
             <div className="form-group">
               <label for="password-signup">Password:</label>
@@ -99,6 +148,8 @@ function Login() {
                 className="form-input"
                 type="password"
                 id="password-signup"
+                name="password"
+                onChange={(e) => onChange(e)}
               />
             </div>
             <div className="form-group">
