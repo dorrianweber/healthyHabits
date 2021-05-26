@@ -31,7 +31,7 @@ function Login() {
         console.log("success!");
         dispatch({
           type: "LOGIN",
-          payload: { user: response.data.user.email },
+          payload: { user: response.data.user.id },
         });
         console.log(state);
         history.push("/profile");
