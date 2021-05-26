@@ -293,6 +293,12 @@ function Homepage() {
           alt="junk food"
           style={{ height: "200px", widht: "200px" }}
         />
+        <img
+          className="ml-3"
+          src="https://github.com/dorrianweber/healthyHabits/blob/main/client/public/images/Graph1.JPG?raw=true"
+          alt="Eating graph"
+          style={{ height: "200px", widht: "200px" }}
+        />
       </Media>
       <br />
     </Container>
