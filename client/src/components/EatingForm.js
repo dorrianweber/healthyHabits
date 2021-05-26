@@ -6,8 +6,8 @@ function EatingForm() {
   const state = useAuthState();
 
   return (
-    <div className="row">
-      <div className="col-md-6">
+    <div>
+      <div>
         <form className="form eating-form">
           <label htmlFor="date">Date:</label>
           <input className="form-input" type="date" id="date" />
@@ -56,12 +56,7 @@ function EatingForm() {
           </button>
         </form>
       </div>
-      <div className="col-md-6">
-        <div className="fancy">
-          <div id="quote"></div>
-          <div id="author"></div>
-        </div>
-      </div>
+
       <br />
     </div>
   );

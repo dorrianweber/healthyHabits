@@ -2,34 +2,27 @@ import React from "react";
 import { useAuthState } from "../utils/state";
 
 function SleepingForm() {
-    const state = useAuthState();
+  const state = useAuthState();
 
-    return (
-        <div>
-            <form className="form sleeping-form">
-                <label for="date">Date:</label>
-                <input className="form-input" type="date" id="date" />
+  return (
+    <div>
+      <form className="form sleeping-form">
+        <label for="date">Date:</label>
+        <input className="form-input" type="date" id="date" />
 
-                <br />
+        <br />
 
-                <label for="sleep-hours">Hours slept:</label>
-                <input className="form-input" type="number" id="sleep-hours" />
+        <label for="sleep-hours">Hours slept:</label>
+        <input className="form-input" type="number" id="sleep-hours" />
 
-                <br />
+        <br />
 
-                <button className="btn btn-primary" id="sleepingSubmit" type="submit">Submit</button>
-
-            </form>
-            <div className="fancy">
-                <div id="quote">
-
-                </div>
-                <div id="author">
-
-                </div>
-            </div>
-        </div>
-    );
-};
+        <button className="btn btn-primary" id="sleepingSubmit" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
 
 export default SleepingForm;
