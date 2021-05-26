@@ -46,12 +46,11 @@ Team members and roles
 
 ## Screenshot
 
-Screenshots of working websit
-![screenshot of working application]()
-![screenshot of working application]()
-![screenshot of working application]()
+Screenshots of working website:
 
-GIF of working application:
+<img src="https://github.com/dorrianweber/healthyHabits/blob/main/client/public/images/HealthyHabits1.JPG?raw=true" width=700> <br />
+<img src="https://github.com/dorrianweber/healthyHabits/blob/main/client/public/images/HealthyHabits2.JPG?raw=true" width=700> <br />
+<img src="https://github.com/dorrianweber/healthyHabits/blob/main/client/public/images/HealthyHabits3.JPG?raw=true" width=700>
 
 ## Installation & Deployment
 
