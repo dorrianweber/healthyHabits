@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Form from "./pages/Form";
 import About from "./pages/About";
+import Active from "./pages/Active";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
@@ -29,7 +30,10 @@ function AppRouter() {
           <Route path={"/form"}>
             <Form />
           </Route>
-          <Route>
+          <Route path={"/active"}>
+            <Active />
+          </Route>
+          <Route path={"/about"}>
             <About />
           </Route>
           <Route>
