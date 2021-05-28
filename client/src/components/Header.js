@@ -33,7 +33,7 @@ function Header() {
             <div>
               <NavLink to="/profile">Profile</NavLink>
               <NavLink to="/form">Log your habits</NavLink>
-
+              <NavLink to="/active">Activity search</NavLink>
               <button
                 onClick={handleLogout}
                 className="no-button"
