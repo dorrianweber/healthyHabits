@@ -105,11 +105,11 @@ img.healthy {
 }
 
 /* Profile charts */
-.row3 {
+/* .row3 {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-}
+  flex-direction: column;
+} */
 
 div.graph {
   flex: 25%;
@@ -246,10 +246,10 @@ input {
 
   /* min-height: 380px; */
 
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  /* position: relative; */
 }
 
 .title {

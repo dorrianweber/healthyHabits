@@ -77,88 +77,109 @@ function Login() {
     console.log(state);
   }, [state]);
   return (
-    <div className="row" id="loginpic">
-      <br />
-      <div className="col-md-6">
-        <h2>Login</h2>
-
-        <form className="form login-form" onSubmit={(e) => loginFormHandler(e)}>
-          <div className="form-group">
-            <label for="email-login">E-mail:</label>
-            <input
-              className="form-input"
-              type="text"
-              id="email-login"
-              name="email"
-              onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <label for="password-login">Password:</label>
-            <input
-              className="form-input"
-              type="password"
-              id="password-login"
-              name="password"
-              onChange={(e) => onChange(e)}
-            />
-          </div>
-          <div className="form-group">
-            <button className="btn btn-primary" type="submit">
-              Login
-            </button>
-          </div>
-        </form>
-
+    <div className="container-flex" id="loginpic">
+      <div className="row">
         <br />
-        {/* <div className="col-md-6">
-              </div> */}
-        <br />
-        <div className="col-md-6" style={{ paddingBottom: "60px" }}>
-          <h2>Sign Up</h2>
+        <div className="col-md">
+          <h2 style={{ paddingLeft: "10px" }}>Login</h2>
 
           <form
-            className="form signup-form"
-            onSubmit={(e) => signupFormHandler(e)}
+            className="form login-form"
+            onSubmit={(e) => loginFormHandler(e)}
           >
             <div className="form-group">
-              <label for="name-signup">Name:</label>
+              <label for="email-login">E-mail:</label>
               <input
                 className="form-input"
                 type="text"
-                id="name-signup"
-                name="name"
-                onChange={(e) => onChange(e)}
-              />
-            </div>
-            <div className="form-group">
-              <label for="email-signup">Email:</label>
-              <input
-                className="form-input"
-                type="text"
-                id="email-signup"
+                id="email-login"
                 name="email"
                 onChange={(e) => onChange(e)}
+                style={{ float: "right" }}
               />
             </div>
+            <br />
             <div className="form-group">
-              <label for="password-signup">Password:</label>
+              <label for="password-login">Password:</label>
               <input
                 className="form-input"
                 type="password"
-                id="password-signup"
+                id="password-login"
                 name="password"
                 onChange={(e) => onChange(e)}
+                style={{ float: "right" }}
               />
             </div>
+            <br />
             <div className="form-group">
-              <button className="btn btn-primary" type="submit">
-                Sign Up
+              <button
+                className="btn btn-primary"
+                type="submit"
+                style={{ placeSelf: "center" }}
+              >
+                Login
               </button>
             </div>
           </form>
+
+          <br />
+
+          <br />
+          <div className="col-md" style={{ paddingBottom: "60px" }}>
+            <h2 style={{ paddingLeft: "10px" }}>Sign Up</h2>
+
+            <form
+              className="form signup-form"
+              onSubmit={(e) => signupFormHandler(e)}
+            >
+              <div className="form-group" style={{ paddingBottom: "10px" }}>
+                <label for="name-signup">Name:</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  id="name-signup"
+                  name="name"
+                  onChange={(e) => onChange(e)}
+                  style={{ float: "right" }}
+                />
+              </div>
+
+              <div className="form-group">
+                <label for="email-signup">Email:</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  id="email-signup"
+                  name="email"
+                  onChange={(e) => onChange(e)}
+                  style={{ float: "right" }}
+                />
+              </div>
+              <br />
+              <div className="form-group">
+                <label for="password-signup">Password:</label>
+                <input
+                  className="form-input"
+                  type="password"
+                  id="password-signup"
+                  name="password"
+                  onChange={(e) => onChange(e)}
+                  style={{ float: "right" }}
+                />
+              </div>
+              <br />
+              <div
+                className="form-group"
+                style={{ justifyContent: "center", alignItems: "center" }}
+              >
+                <button className="btn btn-primary" type="submit">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+          <br />
         </div>
-        <br />
       </div>
     </div>
   );
