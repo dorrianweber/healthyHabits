@@ -2,28 +2,40 @@ import React from "react";
 import EatingForm from "../components/EatingForm";
 import SleepingForm from "../components/SleepingForm";
 import SpendingForm from "../components/SpendingForm";
+import ExerciseForm from "../components/ExerciseForm";
 
 function Form() {
   const [showEating, setShowEating] = React.useState(false);
   const [showSleeping, setShowSleeping] = React.useState(false);
   const [showSpending, setShowSpending] = React.useState(false);
+  const [showExercise, setShowExercise] = React.useState(false);
 
   const handleShowEating = () => {
     setShowEating(true);
     setShowSleeping(false);
     setShowSpending(false);
+    setShowExercise(false);
   };
 
   const handleShowSleeping = () => {
     setShowEating(false);
     setShowSleeping(true);
     setShowSpending(false);
+    setShowExercise(false);
   };
 
   const handleShowSpending = () => {
     setShowEating(false);
     setShowSleeping(false);
     setShowSpending(true);
+    setShowExercise(false);
+  };
+
+  const handleShowExercise = () => {
+    setShowEating(false);
+    setShowSleeping(false);
+    setShowSpending(false);
+    setShowExercise(true);
   };
 
   const url = "https://api.quotable.io/random?tags=inspirational,famous-quotes";
@@ -62,6 +74,9 @@ function Form() {
             case "spending":
               handleShowSpending();
               break;
+            case "exercise":
+              handleShowExercise();
+              break;
             default:
               break;
           }
@@ -72,6 +87,7 @@ function Form() {
           <option value="eating">Eating</option>
           <option value="sleeping">Sleeping</option>
           <option value="spending">Spending</option>
+          <option value="exercise">Exercise</option>
         </select>
 
         <br />
@@ -85,6 +101,7 @@ function Form() {
           {showEating && <EatingForm />}
           {showSleeping && <SleepingForm />}
           {showSpending && <SpendingForm />}
+          {showExercise && <ExerciseForm />}
         </div>
         <div className="col-md-4" style={{ paddingBottom: "20px" }}>
           <div className="fancy">

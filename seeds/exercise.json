@@ -1,0 +1,70 @@
+[
+    {
+      "date": "5/27/21",
+      "workout_name": "Running",
+      "workout_type": "Cardio",
+      "distance": "10",
+      "duration": "240",  
+      "user_id": 1
+    },
+    {
+      "date": "5/26/21",
+      "workout_name": "Running",
+      "workout_type": "Cardio",
+      "distance": "4",
+      "duration": "30",
+      "user_id": 1
+    },
+    {
+      "date": "5/25/21",
+      "workout_name": "Walk",
+      "workout_type": "Cardio",
+      "distance": "5",
+      "duration": "40",
+      "user_id": 1
+    },
+    {
+      "date": "5/24/21",
+      "workout_name": "Hiking",
+      "workout_type": "Cardio",
+      "distance": "6",
+      "duration": "40",
+      "user_id": 1
+    },
+    {
+      "date": "5/27/21",
+      "workout_name": "Bench press",
+      "workout_type": "Strength",
+      "weight": "200",
+      "reps": "10",
+      "duration": "30",
+      "user_id": 1
+    },
+    {
+      "date": "5/26/21",
+      "workout_name": "Curls",
+      "workout_type": "Strength",
+      "weight": "35",
+      "reps": "10",
+      "duration": "20",
+      "user_id": 1
+    },
+    {
+      "date": "5/25/21",
+      "workout_name": "Kettle bell",
+      "workout_type": "Strength",
+      "weight": "50",
+      "reps": "10",
+      "duration": "40",
+      "user_id": 1
+    },
+    {
+      "date": "5/24/21",
+      "workout_name": "deadlifts",
+      "workout_type": "Strength",
+      "weight": "100",
+      "reps": "10",
+      "duration": "15",      
+      "user_id": 1
+    }
+  ]
