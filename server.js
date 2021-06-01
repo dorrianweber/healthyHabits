@@ -5,6 +5,10 @@ const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 const nodemailer = require("nodemailer");
 const axios = require("axios");
+const cron = require("node-cron");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
+const router = require("express").Router();
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -21,6 +25,58 @@ const sess = {
     db: sequelize,
   }),
 };
+
+//node-cron section
+cron.schedule("* 12 * * Sunday", function () {
+  weeklyMail();
+});
+
+const oauth2Client = new OAuth2(
+  process.env.client_ID,
+  process.env.client_S, // Client Secret
+  "https://developers.google.com/oauthplayground" // Redirect URL
+);
+oauth2Client.setCredentials({
+  refresh_token: process.env.refresh_token,
+});
+
+const accessToken = oauth2Client.getAccessToken();
+
+//Weekly mail function using Nodemailer
+function weeklyMail() {
+  const smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      type: "OAuth2",
+      user: process.env.email,
+      pass: process.env.mail_pass,
+      clientId: process.env.client_ID,
+      clientSecret: process.env.client_S,
+      refreshToken: process.env.refresh_token,
+      accessToken: accessToken,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  // Setting credentials
+  const mailOptions = {
+    from: process.env.email,
+    to: userData.email,
+    subject: "Weekly Report from Healthy Habits!",
+    generateTextFromHTML: true,
+    html: `<b>Hey there ${userData.name}! </b><br> This is your weekly report! Below you will find information regarding habits you've logged this week and any goals you've set for yourself!<br>`,
+  };
+
+  // Sending Email
+  smtpTransport.sendMail(mailOptions, (error, response) => {
+    error ? console.log(error) : console.log(response);
+    smtpTransport.close();
+  });
+}
+
+app.listen(3000);
 
 //Active search section
 app.get("/active/:city", (req, res) => {
