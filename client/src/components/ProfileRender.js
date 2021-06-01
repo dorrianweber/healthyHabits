@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useAuthState } from "../utils/state";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 
     var eatChartData = {};
     var eatChartOptions = {};
@@ -9,6 +9,11 @@ import { Bar } from "react-chartjs-2";
     var sleepChartOptions = {};
     var spendChartData = {};
     var spendChartOptions = {};
+    var strengthChartData = {};
+    var strengthChartOptions = {};
+    var cardioChartData = {};
+    var cardioChartOptions = {};
+
     var thisWeek = {};
     var today = new Date();
     var minus1 = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
@@ -63,6 +68,11 @@ import { Bar } from "react-chartjs-2";
     var restaurantSpent = [];
     var coffeeSpent = [];
     var barSpent = [];
+    
+    var strengthWeight = [];
+    var strengthReps = [];
+    var cardioDistance = [];
+    var cardioDuration = [];
 
 const EatGraph = () => {
     const [state, dispatch] = useAuthState();
@@ -291,5 +301,116 @@ return (
 )
 }
 
+const ExerciseGraphs = () => {
+    const [state, dispatch] = useAuthState();
+    const [strengthData, setStrengthData] = useState({})
+    const [strengthOptions, setStrengthOptions] = useState({})
+    const [cardioData, setCardioData] = useState({})
+    const [cardioOptions, setCardioOptions] = useState({})
+    React.useEffect(() => {
+    axios.get("/api/exercise", {
+        user_id: state.user_id
+      }).then((newEx) => {
+        console.log(newEx.data);
+        for (let index = 0; index < 8; index++) {
+            let element = thisWeek[index];
+            let strengthCheck = false
+            let cardioCheck = false
+          for (let index2 = 0; index2 < newEx.data.data.length +1; index2++) {
+            if (newEx.data.data[index2] && newEx.data.data[index2].date === element) {
+          switch (newEx.data.data[index2].workout_type) {
+            case ("Strength"):
+            strengthReps.push(newEx.data.data[index2].reps)
+            strengthWeight.push(newEx.data.data[index2].weight)
+            strengthCheck = true;
+            break;
+           case ("Cardio"):
+            cardioDistance.push(newEx.data.data[index2].distance)
+            cardioDuration.push(newEx.data.data[index2].duration)
+            cardioCheck = true;
+           break;
+           default:
+            console.log("invalid type:")
+            console.log(newEx.data.data[index].workout_type)
+            break;
+          };
+        };
+    };
+          if (strengthCheck === false)
+          strengthReps.push(0)
+          strengthWeight.push(0)
+          if (cardioCheck === false)
+          cardioDistance.push(0)
+          cardioDuration.push(0)
 
-export { EatGraph, SleepGraph, SpendGraph };
+
+        
+      };
+
+      
+        strengthChartData = {
+          labels: thisWeek,
+          datasets: [
+            {
+              data: strengthReps,
+              label: "Reps",
+              backgroundColor: "green",
+            },
+            {
+              data: strengthWeight,
+              label: "Weight",
+              backgroundColor: "lime",
+            },
+          ],
+        };
+        strengthChartOptions = {
+          title: {
+            display: true,
+            text: "Strength Exercises:",
+          },
+        };
+
+        cardioChartData = {
+            labels: thisWeek,
+            datasets: [
+              {
+                data: cardioDistance,
+                label: "Distance",
+                backgroundColor: "purple",
+              },
+              {
+                data: cardioDuration,
+                label: "Duration",
+                backgroundColor: "maroon",
+              },
+            ],
+          };
+          cardioChartOptions = {
+            title: {
+              display: true,
+              text: "Cardio Exercises:",
+            },
+          };
+
+      console.log(strengthChartData, strengthChartOptions)
+      setStrengthData(strengthChartData)
+      setStrengthOptions(strengthChartOptions)
+      setCardioData(cardioChartData)
+      setCardioOptions(cardioChartOptions)
+}).catch(err => {
+    console.log(err)
+});
+      // eslint-disable-next-line
+    }, [])
+return (
+    <>
+    <Line data={strengthData} options={strengthOptions}/>
+    <Line data={cardioData} options={cardioOptions}/>
+    </>
+)
+}
+
+
+
+
+export { EatGraph, SleepGraph, SpendGraph, ExerciseGraphs };
