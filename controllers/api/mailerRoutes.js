@@ -65,4 +65,4 @@ const mailer = (userData) => {
   });
 };
 
-module.exports = mailer;
+module.exports = router;
