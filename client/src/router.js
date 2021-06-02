@@ -16,7 +16,7 @@ function AppRouter() {
       <header className="App-header">
         <Header />
       </header>
-      <div>
+      <div style={{ paddingBottom: "40px" }}>
         <Switch>
           <Route exact path={"/"}>
             <Homepage />
@@ -43,6 +43,7 @@ function AppRouter() {
         <br />
         <Footer />
       </div>
+      <br />
     </Router>
   );
 }
