@@ -76,8 +76,6 @@ function weeklyMail() {
   });
 }
 
-app.listen(3000);
-
 //Active search section
 app.get("/active/:city", (req, res) => {
   console.log("hit active");
