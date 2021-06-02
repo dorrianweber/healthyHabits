@@ -9,10 +9,9 @@ import { Bar, Line } from "react-chartjs-2";
     var sleepChartOptions = {};
     var spendChartData = {};
     var spendChartOptions = {};
-    var strengthChartData = {};
-    var strengthChartOptions = {};
-    var cardioChartData = {};
-    var cardioChartOptions = {};
+    var exChartData = {};
+    var exChartOptions = {};
+
 
     var thisWeek = {};
     var today = new Date();
@@ -81,7 +80,6 @@ const EatGraph = () => {
     axios.get("/api/eating", {
         user_id: state.user_id
       }).then((eatingResponse) => {
-            console.log(eatingResponse.data.data)
               for (let index = 0; index < 8; index++) {
                 let element = thisWeek[index];
                 let breakfastCheck = false
@@ -118,12 +116,6 @@ const EatGraph = () => {
                           snacks.push(0)
                         };
             };
-          
-                console.log(breakfasts)
-                console.log(lunches)
-                console.log(dinners)
-                console.log(snacks)
-
                 eatChartData = {
           labels: thisWeek,
           datasets: [
@@ -164,7 +156,6 @@ const EatGraph = () => {
             text: "Calories per Meal",
           },
         };
-        console.log(eatChartData, eatChartOptions)
         setEatData(eatChartData);
         setEatOptions(eatChartOptions);
     }).catch(err => {
@@ -185,15 +176,11 @@ const SleepGraph = () => {
         axios.get("/api/sleeping", {
             user_id: state.user_id
           }).then((newSleep) => {
-            console.log(newSleep.data);
             for (let index = 0; index < 8; index++) {
               let element = thisWeek[index];
-              console.log(newSleep.data.data.length, element)
               let sleepCheck = false
               for (let index2 = 0; index2 < newSleep.data.data.length +1; index2++) {
-                  console.log("youtriggeredme1")
               if (newSleep.data.data[index2] && newSleep.data.data[index2].date === element) {
-                  console.log("youtriggeredme2")
                 sleepHours.push(newSleep.data.data[index2].hours)
                 sleepCheck = true;
               };
@@ -219,7 +206,6 @@ const SleepGraph = () => {
                 text: "Hours Slept per Night",
               },
             };
-        console.log(sleepChartData, sleepChartOptions)
         setSleepData(sleepChartData)
         setSleepOptions(sleepChartOptions)
     }).catch(err => {
@@ -240,7 +226,6 @@ const SpendGraph = () => {
     axios.get("/api/spending", {
         user_id: state.user_id
       }).then((newSpend) => {
-        console.log(newSpend.data);
         for (let index = 0; index < 8; index++) {
           let element = thisWeek[index];
           let spendCheck = false
@@ -287,7 +272,6 @@ const SpendGraph = () => {
             text: "Money Spent per Day",
           },
         };
-      console.log(spendChartData, spendChartOptions)
       setSpendData(spendChartData)
       setSpendOptions(spendChartOptions)
 }).catch(err => {
@@ -302,15 +286,12 @@ return (
 
 const ExerciseGraphs = () => {
     const [state, dispatch] = useAuthState();
-    const [strengthData, setStrengthData] = useState({})
-    const [strengthOptions, setStrengthOptions] = useState({})
-    const [cardioData, setCardioData] = useState({})
-    const [cardioOptions, setCardioOptions] = useState({})
+    const [exData, setExData] = useState({})
+    const [exOptions, setExOptions] = useState({})
     React.useEffect(() => {
     axios.get("/api/exercise", {
         user_id: state.user_id
       }).then((newEx) => {
-        console.log(newEx.data);
         for (let index = 0; index < 8; index++) {
             let element = thisWeek[index];
             let strengthCheck = false
@@ -343,55 +324,38 @@ const ExerciseGraphs = () => {
       };
 
       
-        strengthChartData = {
+        exChartData = {
           labels: thisWeek,
           datasets: [
             {
               data: strengthDuration,
-              label: "Duration",
+              label: "Strength Duration (minutes)",
               backgroundColor: "green",
             },
+            {
+                data: cardioDuration,
+                label: "Cardio Duration (minutes)",
+                backgroundColor: "maroon",
+              },
           ],
         };
-        strengthChartOptions = {
+        exChartOptions = {
           title: {
             display: true,
-            text: "Strength Exercises:",
+            text: "Exercises:",
           },
         };
 
-        cardioChartData = {
-            labels: thisWeek,
-            datasets: [
-              {
-                data: cardioDuration,
-                label: "Duration",
-                backgroundColor: "maroon",
-              },
-            ],
-          };
-          cardioChartOptions = {
-            title: {
-              display: true,
-              text: "Cardio Exercises:",
-            },
-          };
+      setExData(exChartData)
+      setExOptions(exChartOptions)
 
-      console.log(strengthChartData, strengthChartOptions)
-      setStrengthData(strengthChartData)
-      setStrengthOptions(strengthChartOptions)
-      setCardioData(cardioChartData)
-      setCardioOptions(cardioChartOptions)
 }).catch(err => {
     console.log(err)
 });
       // eslint-disable-next-line
     }, [])
 return (
-    <>
-    <Line data={strengthData} options={strengthOptions}/>
-    <Line data={cardioData} options={cardioOptions}/>
-    </>
+    <Line data={exData} options={exOptions}/>
 )
 }
 
