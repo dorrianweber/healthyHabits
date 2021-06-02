@@ -164,14 +164,14 @@ class SearchResultContainer extends Component {
             >
               Clear
             </button>
-            <label htmlFor="activity_type">Activity Type:</label>
+            {/* <label htmlFor="activity_type">Activity Type:</label>
             <select name="activity_type" id="activity_type">
               <option value="Select">Select one</option>
               <option value="Running">Endurance-running</option>
               <option value="Lunch">Camps-any</option>
               <option value="Dinner">Dinner</option>
               <option value="Snack">Snack</option>
-            </select>
+            </select> */}
           </div>
         </form>
 

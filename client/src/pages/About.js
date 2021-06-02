@@ -7,14 +7,16 @@ function About() {
   return (
     <div className="container">
       <div>
-        <h1>About us</h1>
+        <h1 style={{ color: "blue" }}>About us</h1>
         <p>
           Healthy Habits was created to help people improve their life by
           changing bad habits and creating healthy habits.
         </p>
 
+        <p>Our goal is to help you achieve your goal.</p>
+
         <div className="container-fluid">
-          <h2>Team members:</h2>
+          <h2 style={{ color: "blue" }}>Executive Team Members:</h2>
           <CardDeck className="row">
             <div className="col-md-3">
               <Card
