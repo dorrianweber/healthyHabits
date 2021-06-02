@@ -76,7 +76,7 @@ function weeklyMail() {
   });
 }
 
-app.listen(3000);
+// app.listen(3000);
 
 //Active search section
 app.get("/active/:city", (req, res) => {
