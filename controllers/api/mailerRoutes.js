@@ -52,7 +52,7 @@ const mailer = (userData) => {
   });
 
   const mailOptions = {
-    from: "healthyhabitsapp123@gmail.com",
+    from: process.env.email,
     to: userData.email,
     subject: "Welcome to Healthy Habits!",
     generateTextFromHTML: true,
