@@ -1,4 +1,5 @@
 import React from "react";
+import DarkModeToggle from "./DarkModeToggle";
 
 function Footer() {
   return (
@@ -13,7 +14,10 @@ function Footer() {
           </a>
           <a href="mailto:healthyhabitsapp123@gmail.com">Contact us.</a>
         </div>
-        <hr />
+        <div>
+          <DarkModeToggle/>
+        </div>
+        <br />
         <div>
           <p>
             Copyright @2021 Healthy Habits. All rights reserved.
