@@ -10,6 +10,7 @@ function App() {
       <AuthProvider value={{ state, dispatch }}>
         <AppRouter />
       </AuthProvider>
+      <br />
     </div>
   );
 }

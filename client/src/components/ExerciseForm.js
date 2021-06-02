@@ -52,7 +52,7 @@ function ExerciseForm() {
     console.log(state);
   }, [state]);
   return (
-    <div>
+    <div style={{ paddingBottom: "50px" }}>
       <div>
         <form
           className="form exercise-form"
