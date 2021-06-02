@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 function Header() {
   let history = useHistory();
   const [state, dispatch] = useAuthState();
+
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     history.push("/");
@@ -34,6 +35,7 @@ function Header() {
               <NavLink to="/profile">Profile</NavLink>
               <NavLink to="/form">Log your habits</NavLink>
               <NavLink to="/active">Activity search</NavLink>
+            
               <button
                 onClick={handleLogout}
                 className="no-button"
