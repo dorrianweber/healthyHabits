@@ -118,13 +118,6 @@ img.healthy {
   text-align: center;
 }
 
-/* Profile charts */
-/* .row3 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
 div.media {
   justify-content: center;
   text-align: center;
@@ -132,11 +125,12 @@ div.media {
 }
 
 div.graph {
-  flex: 25%;
-  padding: 20px;
+  padding: 10px;
+  margin: 5px;
   font-size: medium;
   text-align: center;
   position: relative;
+  border: solid skyblue;
 }
 
 div.card.dark-mode {
@@ -240,7 +234,7 @@ input {
   padding: 80px 1em 0 1em;
   margin: 0 80px;
   position: relative;
-  background-color: rgb(77, 95, 97);
+  background-color: rgb(115, 192, 201);
   border-radius: 100% 100% 0 0;
 }
 
@@ -250,7 +244,7 @@ input {
   position: absolute;
   bottom: 0;
   z-index: -1;
-  background-color: rgb(77, 95, 97);
+  background-color: rgb(115, 192, 201);
   border-radius: 100%;
 }
 
@@ -312,7 +306,7 @@ a.link {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -340,8 +334,8 @@ code {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -352,16 +346,16 @@ code {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {

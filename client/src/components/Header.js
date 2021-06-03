@@ -25,17 +25,25 @@ function Header() {
           <NavLink className="link" to="/">
             Home
           </NavLink>
-          <NavLink className="link" to="/about">About us</NavLink>
+
           {!state.isAuthenticated ? (
             <div>
-              <NavLink className="link" to={"/login"}>Login</NavLink>
+              <NavLink className="link" to={"/login"}>
+                Login
+              </NavLink>
             </div>
           ) : (
             <div>
-              <NavLink className="link" to="/profile">Profile</NavLink>
-              <NavLink className="link" to="/form">Log your habits</NavLink>
-              <NavLink className="link" to="/active">Activity search</NavLink>
-            
+              <NavLink className="link" to="/profile">
+                Dashboard
+              </NavLink>
+              <NavLink className="link" to="/form">
+                Log your habits
+              </NavLink>
+              <NavLink className="link" to="/active">
+                Activity search
+              </NavLink>
+
               <button
                 onClick={handleLogout}
                 className="no-button"
