@@ -7,13 +7,12 @@ function DarkModeToggle() {
     console.log(darkMode.value);
   };
   return (
-    <div>
-      {" "}
-      ☀{" "}
+    <div id="toggleEmote">
+      ☀
       <label className="switch">
         <input checked={darkMode.value} onChange={darkSwitch} type="checkbox" />
         <span className="slider round"></span>
-      </label>{" "}
+      </label>
       ☾
     </div>
   );
