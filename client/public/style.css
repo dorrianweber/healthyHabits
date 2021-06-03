@@ -2,34 +2,11 @@ header {
   text-align: center;
   padding-top: 5px;
   width: 100%;
-}
-
-header {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(25, 37, 204),
-    rgb(32, 89, 163),
-    rgb(82, 167, 196)
-  );
-  color: black;
-}
-
-header.light-mode {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(25, 37, 204),
-    rgb(32, 89, 163),
-    rgb(82, 167, 196)
-  );
-  color: black;
-}
-
-header.dark-mode {
   background-image: linear-gradient(
     to bottom left,
     rgb(16, 18, 54),
     rgb(26, 56, 95),
-    rgb(21, 81, 100)
+    rgb(35, 108, 131)
   );
   color: #ccc;
 }
@@ -149,6 +126,12 @@ img.healthy {
   flex-direction: column;
 } */
 
+div.media {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15ch;
+}
+
 div.graph {
   flex: 25%;
   padding: 20px;
@@ -165,7 +148,7 @@ div.graph.light-mode {
 
 div.graph.dark-mode {
   border: solid rgb(67, 96, 107);
-  color: rgb(30, 30, 94);
+  color: rgb(73, 73, 139);
   transition: color 1s ease;
 }
 
@@ -208,6 +191,22 @@ div.graph.dark-mode {
   padding: 14px 16px;
   /* text-decoration: none;
   background-color: none; */
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(16, 18, 54),
+    rgb(26, 56, 95),
+    rgb(35, 108, 131)
+  );
+  color: #ccc;
 }
 
 form.form {
@@ -299,36 +298,8 @@ body.dark-mode {
   transition: background-color 1s ease;
 }
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-footer.light-mode {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(25, 37, 204),
-    rgb(32, 89, 163),
-    rgb(82, 167, 196)
-  );
-
-  color: white;
-  transition: background-image 1s ease;
-}
-
-footer.dark-mode {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(16, 18, 54),
-    rgb(26, 56, 95),
-    rgb(21, 81, 100)
-  );
-  color: #ccc;
-  transition: background-image 1s ease;
+.link {
+  color: rgb(223, 222, 222);
 }
 
 #logout {

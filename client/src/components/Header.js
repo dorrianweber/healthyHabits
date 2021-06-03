@@ -22,19 +22,19 @@ function Header() {
         <h1>Healthy Habits!</h1>
         <hr />
         <nav className="topnav">
-          <NavLink className="home" to="/">
+          <NavLink className="link" to="/">
             Home
           </NavLink>
-          <NavLink to="/about">About us</NavLink>
+          <NavLink className="link" to="/about">About us</NavLink>
           {!state.isAuthenticated ? (
             <div>
-              <NavLink to={"/login"}>Login</NavLink>
+              <NavLink className="link" to={"/login"}>Login</NavLink>
             </div>
           ) : (
             <div>
-              <NavLink to="/profile">Profile</NavLink>
-              <NavLink to="/form">Log your habits</NavLink>
-              <NavLink to="/active">Activity search</NavLink>
+              <NavLink className="link" to="/profile">Profile</NavLink>
+              <NavLink className="link" to="/form">Log your habits</NavLink>
+              <NavLink className="link" to="/active">Activity search</NavLink>
             
               <button
                 onClick={handleLogout}
