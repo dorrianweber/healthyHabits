@@ -122,9 +122,6 @@ function Homepage() {
                     </ul>
                   </li>
                   <li>
-                    <h4>There Is No Perfect Diet for Everyone</h4>
-                  </li>
-                  <li>
                     <h4>
                       “Diets” Don’t Work — a Lifestyle Change Is Necessary
                     </h4>

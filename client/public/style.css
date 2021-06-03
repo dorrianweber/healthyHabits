@@ -104,7 +104,7 @@ div.welcome.dark-mode {
 
 .column.dark-mode {
   color: #212031;
-  border: solid rgb(75, 116, 133);
+  border: solid rgb(21, 31, 36);
   transition: color 1s ease;
 }
 
@@ -137,6 +137,10 @@ div.graph {
   font-size: medium;
   text-align: center;
   position: relative;
+}
+
+div.card.dark-mode {
+  background-color: rgb(21, 24, 53);
 }
 
 div.graph.light-mode {
