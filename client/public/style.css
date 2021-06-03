@@ -13,7 +13,7 @@ header {
 
 header h1 {
   font-size: 50px;
-  color: black;
+  color: white;
 }
 
 body {
@@ -119,13 +119,6 @@ img.healthy {
   text-align: center;
 }
 
-/* Profile charts */
-/* .row3 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
 div.media {
   justify-content: center;
   text-align: center;
@@ -133,11 +126,12 @@ div.media {
 }
 
 div.graph {
-  flex: 25%;
-  padding: 20px;
+  padding: 10px;
+  margin: 5px;
   font-size: medium;
   text-align: center;
   position: relative;
+  border: solid skyblue;
 }
 
 div.graph.light-mode {
@@ -237,7 +231,7 @@ input {
   padding: 80px 1em 0 1em;
   margin: 0 80px;
   position: relative;
-  background-color: rgb(77, 95, 97);
+  background-color: rgb(115, 192, 201);
   border-radius: 100% 100% 0 0;
 }
 
@@ -247,7 +241,7 @@ input {
   position: absolute;
   bottom: 0;
   z-index: -1;
-  background-color: rgb(77, 95, 97);
+  background-color: rgb(115, 192, 201);
   border-radius: 100%;
 }
 

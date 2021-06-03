@@ -21,39 +21,43 @@ function Profile() {
           alt="HealthyHabbitsLogo"
           src="https://github.com/dorrianweber/project2/blob/main/public/images/healthyhabits.png?raw=true"
         />
-        <div className="row">
-          <div className="col">
-            <div className="graph">
+        <div>
+          <div className="row">
+            <div
+              className="graph"
+              style={{ width: "650px", height: "400px", float: "left" }}
+            >
               <p>Eating:</p>
               <EatGraph />
             </div>
-            <br />
-          </div>
 
-          <div className="col">
-            <div className="graph">
+            <div
+              className="graph"
+              style={{ width: "650px", height: "400px", float: "right" }}
+            >
               <p>Sleeping:</p>
               <SleepGraph />
             </div>
-            <br />
           </div>
-          <div className="col">
-            <div className="graph">
+          <br />
+          <div className="row">
+            <div
+              className="graph"
+              style={{ width: "650px", height: "400px", float: "left" }}
+            >
               <p>Spending:</p>
               <SpendGraph />
             </div>
-            <br />
-          </div>
 
-          <div className="col">
-            <div className="graph">
+            <div
+              className="graph"
+              style={{ width: "650px", height: "400px", float: "right" }}
+            >
               <p>Exercises:</p>
               <ExerciseGraphs />
             </div>
             <br />
           </div>
-          <div className="col"></div>
-          <div className="col"></div>
         </div>
         <br />
       </section>
