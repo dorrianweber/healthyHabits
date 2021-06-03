@@ -30,18 +30,19 @@ Technologies used:
 7. MySQL2
 8. Bcrypt
 9. Session
-10. Chart.js
+10. Chart.js2
 11. Moment.js
 12. Nodemailer
+13. Dark mode
 
 ## Team Members
 
 Team members and roles
 
-1. Reynaldo Bracamonte -- Seeds, Controllers, Public (CSS/JS), Handlebars, Chart.js
-2. Dorrian Weber -- Utilities, Server, Controllers, Models, Public (CSS/JS), Handlebars
-3. Matthew Herold-- Utilities, Server, Controllers, Models, Public (CSS/JS), Handlebars, Chart.js
-4. Chris Holmes -- Seeds, Handlebars, Public (CSS/JS), API integration
+1. Reynaldo Bracamonte -- Seeds, Controllers, Public (CSS/JS), React, Chart.js, API integration
+2. Dorrian Weber -- Server, Controllers, Models, Public (CSS/JS), React
+3. Matthew Herold-- Server, Controllers, Models, Public (CSS/JS), React, Chart.js2, Dark mode
+4. Chris Holmes -- Seeds, React, Public (CSS/JS), API integration
 5. Petr Constantinov -- HTML, CSS
 
 ## Screenshot
@@ -62,15 +63,13 @@ https://github.com/dorrianweber/healthyHabits
 
 ## Future Scope
 
-Future scope would be to add:
+Future scope would be to add a premium charge option that includes setting goals, email progress, and social media:
 
 1. Setting goals - Goal setting enhancement, so the user can compare goals to actual results.
 
 2. Email progress - Email users weekly progress report on how they are doing. Inform them of goals met or not met, medals earned, and goal reminders to keep users on track
 
-3. Active lifestyle events search - Give users the ability to search for active events (i.e. walking, running, etc.) in their area. This would further help the user with adding healthy habits
-
-4. Social media - Add a social media option, so that users can compete with friends, share progress, and motivate each other.
+3. Social media - Add a social media option, so that users can compete with friends, share progress, and motivate each other.
 
 ## Acknowledgments
 

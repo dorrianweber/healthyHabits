@@ -55,19 +55,19 @@ function Homepage() {
         </div>
         <hr />
         {/* Start of new section */}
-        <Media>
+        <div>
           <Row className="row">
             <Col md={12}>
-              <Media.Body>
-                <p style={{ color: "blue", textAlign: "center" }}>
-                  "You'll never change your life until you change something you
-                  do Daily. The secret of your success is found in your daily
-                  routine." -John C. Maxwell
-                </p>
-              </Media.Body>
+              {/* <Media.Body> */}
+              <p style={{ color: "blue", textAlign: "center" }}>
+                "You'll never change your life until you change something you do
+                Daily. The secret of your success is found in your daily
+                routine." -John C. Maxwell
+              </p>
+              {/* </Media.Body>s */}
             </Col>
           </Row>
-        </Media>
+        </div>
         <hr />
         <Container
           // className="container-flex"
