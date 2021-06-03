@@ -6,7 +6,7 @@ const darkSwitch = () => {
     darkMode.toggle()
     console.log(darkMode.value)
 }
-return (<div>☀
+return (<div id="toggleEmote">☀
     <label className="switch">
   <input checked={darkMode.value} onChange={darkSwitch}  type="checkbox"/>
   <span className="slider round"></span>

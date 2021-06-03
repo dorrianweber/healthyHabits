@@ -11,7 +11,6 @@ header {
   color: #ccc;
 }
 
-
 header h1 {
   font-size: 50px;
   color: white;
@@ -42,7 +41,6 @@ body {
 
 .topnav {
   overflow: hidden;
-
   width: auto;
 }
 
@@ -299,11 +297,12 @@ body.dark-mode {
   transition: background-color 1s ease;
 }
 
-.link {
+a.link {
   color: rgb(223, 222, 222);
 }
 
 #logout {
+  color: white;
   background-color: transparent;
   border: none;
 }
