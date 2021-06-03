@@ -14,8 +14,9 @@ function Footer() {
           </a>
           <a href="mailto:healthyhabitsapp123@gmail.com">Contact us.</a>
         </div>
+        <br />
         <div>
-          <DarkModeToggle/>
+          <DarkModeToggle />
         </div>
         <br />
         <div>

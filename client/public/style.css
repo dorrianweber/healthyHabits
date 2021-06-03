@@ -4,6 +4,16 @@ header {
   width: 100%;
 }
 
+header {
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(25, 37, 204),
+    rgb(32, 89, 163),
+    rgb(82, 167, 196)
+  );
+  color: black;
+}
+
 header.light-mode {
   background-image: linear-gradient(
     to bottom left,
@@ -11,7 +21,7 @@ header.light-mode {
     rgb(32, 89, 163),
     rgb(82, 167, 196)
   );
-  color: white;
+  color: black;
 }
 
 header.dark-mode {
@@ -26,7 +36,7 @@ header.dark-mode {
 
 header h1 {
   font-size: 50px;
-  color: white;
+  color: black;
 }
 
 body {
@@ -200,37 +210,6 @@ div.graph.dark-mode {
   background-color: none; */
 }
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-footer.light-mode {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(25, 37, 204),
-    rgb(32, 89, 163),
-    rgb(82, 167, 196)
-  );
-  color: white;
-  transition: background-image 1s ease;
-}
-
-footer.dark-mode {
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(16, 18, 54),
-    rgb(26, 56, 95),
-    rgb(21, 81, 100)
-  );
-  color: #ccc;
-  transition: background-image 1s ease;
-}
-
 form.form {
   text-align: left;
   margin: 10px;
@@ -310,7 +289,7 @@ input {
 }
 
 body.light-mode {
-  background-color: rgb(212, 212, 212);
+  background-color: white;
   color: #333;
   transition: background-color 1s ease;
 }
@@ -320,13 +299,45 @@ body.dark-mode {
   transition: background-color 1s ease;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+footer.light-mode {
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(25, 37, 204),
+    rgb(32, 89, 163),
+    rgb(82, 167, 196)
+  );
+
+  color: white;
+  transition: background-image 1s ease;
+}
+
+footer.dark-mode {
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(16, 18, 54),
+    rgb(26, 56, 95),
+    rgb(21, 81, 100)
+  );
+  color: #ccc;
+  transition: background-image 1s ease;
+}
+
 #logout {
   background-color: transparent;
   border: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -354,8 +365,8 @@ code {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -366,16 +377,16 @@ code {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
