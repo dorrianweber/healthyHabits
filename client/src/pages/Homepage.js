@@ -59,7 +59,7 @@ function Homepage() {
           <Row className="row">
             <Col md={12}>
               {/* <Media.Body> */}
-              <p style={{ color: "blue", textAlign: "center" }}>
+              <p style={{textAlign: "center" }}>
                 "You'll never change your life until you change something you do
                 Daily. The secret of your success is found in your daily
                 routine." -John C. Maxwell

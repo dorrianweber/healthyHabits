@@ -7,44 +7,35 @@ function About() {
   return (
     <div className="container">
       <div>
-        <h1 style={{ color: "blue" }}>About us</h1>
-        <p>
+        <h1 id="aboutUsTitle">About us</h1>
+        <p id="aboutUsDesc">
           Healthy Habits was created to help people improve their life by
           changing bad habits and creating healthy habits.
         </p>
 
-        <p>Our goal is to help you achieve your goal.</p>
+        <p id="aboutUsDesc">Our goal is to help you achieve your goal.</p>
 
         <div className="container-fluid">
-          <h2 style={{ color: "blue" }}>Executive Team Members:</h2>
+          <h2 className="AboutUsTitle">Executive Team Members:</h2>
           <CardDeck className="row">
             <div className="col-md-3">
-              <Card
-                style={{
-                  width: "18rem",
-                  height: "31rem",
-                  background: "lightblue",
-                  paddingRight: "10px",
-                  marginRight: "5px",
-                }}
-              >
+              <Card className="aboutCard">
                 <Card.Img
                   variant="top"
                   src="https://www.jing.fm/clipimg/detail/221-2216832_wolverine-wolverine-png-marvel-wolverine.png"
-                  style={{ padding: "10px" }}
+                  style={{height: "275px", width: "275px", alignSelf: "center", marginLeft: "9px"}}
                 />
                 <Card.Body>
                   <Card.Title>Reynaldo Bracamonte</Card.Title>
                   <Card.Text>Co-Founder</Card.Text>
                 </Card.Body>
                 <ListGroup
-                  className="list-group-flush"
-                  style={{ background: "lightblue" }}
+                  className="list-group-flush aboutUsList"
                 >
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     Project Manager
                   </ListGroup.Item>
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     Lead CSS/HTML developer
                   </ListGroup.Item>
                 </ListGroup>
@@ -65,31 +56,24 @@ function About() {
 
             {/* Dorrian */}
             <div className="col-md-3">
-              <Card
-                style={{
-                  width: "18rem",
-                  height: "31rem",
-                  background: "lightblue",
-                  paddingRight: "10px",
-                }}
+              <Card className="aboutCard"
               >
                 <Card.Img
                   variant="top"
                   src="https://www.jing.fm/clipimg/detail/31-319221_cigarette-clipart-no-background-nightcrawler-transparent-background.png"
-                  style={{ padding: "10px" }}
+                  style={{height: "275px", width: "275px", alignSelf: "center", marginLeft: "9px"}}
                 />
                 <Card.Body>
                   <Card.Title>Dorrian Weber</Card.Title>
                   <Card.Text>Co-Founder</Card.Text>
                 </Card.Body>
                 <ListGroup
-                  className="list-group-flush"
-                  style={{ background: "lightblue" }}
+                  className="list-group-flush aboutUsList"
                 >
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     React developer
                   </ListGroup.Item>
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     MySQL developer
                   </ListGroup.Item>
                 </ListGroup>
@@ -110,31 +94,24 @@ function About() {
 
             {/* Matt */}
             <div className="col-md-3">
-              <Card
-                style={{
-                  width: "18rem",
-                  height: "31rem",
-                  background: "lightblue",
-                  paddingRight: "10px",
-                }}
+              <Card className="aboutCard"
               >
                 <Card.Img
                   variant="top"
                   src="https://www.kindpng.com/picc/m/760-7600720_x-men-cyclops-comic-x-men-cyclops-hd.png"
-                  style={{ padding: "10px" }}
+                  style={{height: "275px", width: "275px", alignSelf: "center", marginLeft: "9px"}}
                 />
                 <Card.Body>
                   <Card.Title>Matthew Herold</Card.Title>
                   <Card.Text>Co-Founder</Card.Text>
                 </Card.Body>
                 <ListGroup
-                  className="list-group-flush"
-                  style={{ background: "lightblue" }}
+                  className="list-group-flush aboutUsList"
                 >
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     React developer
                   </ListGroup.Item>
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     MySQL developer
                   </ListGroup.Item>
                 </ListGroup>
@@ -155,31 +132,24 @@ function About() {
 
             {/* Chris */}
             <div className="col-md-3">
-              <Card
-                style={{
-                  width: "18rem",
-                  height: "31rem",
-                  background: "lightblue",
-                  paddingRight: "10px",
-                }}
+              <Card className="aboutCard"
               >
                 <Card.Img
                   variant="top"
                   src="https://i.annihil.us/u/prod/marvel/i/mg/6/a0/50fef6e158082/standard_incredible.jpg"
-                  style={{ padding: "10px" }}
+                  style={{height: "275px", width: "275px", alignSelf: "center", marginLeft: "9px"}}
                 />
                 <Card.Body>
                   <Card.Title>Chris Holmes</Card.Title>
                   <Card.Text>Co-Founder</Card.Text>
                 </Card.Body>
                 <ListGroup
-                  className="list-group-flush"
-                  style={{ background: "lightblue" }}
+                  className="list-group-flush aboutUsList"
                 >
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     HTML/CSS developer
                   </ListGroup.Item>
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     NodeMailer developer
                   </ListGroup.Item>
                 </ListGroup>
@@ -200,31 +170,24 @@ function About() {
 
             {/* Petr Constantinov */}
             <div className="col-md-3">
-              <Card
-                style={{
-                  width: "18rem",
-                  height: "31rem",
-                  background: "lightblue",
-                  paddingRight: "10px",
-                }}
+              <Card className="aboutCard"
               >
                 <Card.Img
                   variant="top"
                   src="https://cdn11.bigcommerce.com/s-g46gbd16ag/images/stencil/640w/products/2248/1516/mafex.gambit0012__16959.1593001667.jpg?c=1"
-                  style={{ padding: "10px" }}
+                  style={{height: "275px", width: "275px", alignSelf: "center", marginLeft: "9px"}}
                 />
                 <Card.Body>
                   <Card.Title>Petr Constantinov</Card.Title>
                   <Card.Text>Product Support</Card.Text>
                 </Card.Body>
                 <ListGroup
-                  className="list-group-flush"
-                  style={{ background: "lightblue" }}
+                  className="list-group-flush aboutUsList"
                 >
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     HTML/CSS developer
                   </ListGroup.Item>
-                  <ListGroup.Item style={{ background: "lightblue" }}>
+                  <ListGroup.Item className="aboutUsLI">
                     Team member
                   </ListGroup.Item>
                 </ListGroup>
