@@ -24,16 +24,17 @@ Technologies used:
 1. Express.js
 2. Node.js
 3. React
-4. Sequelize
-5. Authentication
-6. dotenv
-7. MySQL2
-8. Bcrypt
-9. Session
-10. Chart.js2
-11. Moment.js
-12. Nodemailer
-13. Dark mode
+4. Axios
+5. Sequelize
+6. Authentication
+7. dotenv
+8. MySQL2
+9. Bcrypt
+10. Session
+11. React-Chart.js-2
+12. Moment.js
+13. Nodemailer
+14. Use-dark-mode
 
 ## Team Members
 
