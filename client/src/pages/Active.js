@@ -175,14 +175,14 @@ class SearchResultContainer extends Component {
           </div>
         </form>
 
-        <table className="table table-hover">
-          <caption>List of Activities near you</caption>
-          <thead className="thead-dark">
+        <table className="table table-hover" style={{color: "gray"}}>
+          <caption>List of activities near you</caption>
+          <thead>
             <tr>
               <th>Event Picture</th>
               <th>Activity Name</th>
               <th>Description</th>
-              <th>organization Name</th>
+              <th>Organization Name</th>
               <th>Start Date</th>
               <th>End Date</th>
               <th>Registration status</th>
