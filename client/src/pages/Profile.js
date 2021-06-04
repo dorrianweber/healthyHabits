@@ -5,7 +5,7 @@ import {
   EatGraph,
   SleepGraph,
   SpendGraph,
-  ExerciseGraphs,
+  ExerciseGraph,
 } from "../components/ProfileRender";
 
 function Profile() {
@@ -54,7 +54,7 @@ function Profile() {
               style={{ width: "650px", height: "400px", float: "right" }}
             >
               <p>Exercises:</p>
-              <ExerciseGraphs />
+              <ExerciseGraph />
             </div>
             <br />
           </div>

@@ -1,3 +1,23 @@
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row2 {
+    flex-direction: column;
+  }
+}
+
+body {
+  flex: 1;
+  padding: 10px;
+  height: auto;
+  position: relative;
+  min-height: 100vh;
+}
+
 header {
   text-align: center;
   padding-top: 5px;
@@ -16,42 +36,30 @@ header h1 {
   color: white;
 }
 
-body {
-  flex: 1;
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   padding: 10px;
-  height: auto;
-  position: relative;
-  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(16, 18, 54),
+    rgb(26, 56, 95),
+    rgb(35, 108, 131)
+  );
+  color: #ccc;
 }
 
-.quotes {
-  text-align: center;
-  padding: 5px;
+input {
+  margin: 5px;
+  align-content: right;
 }
 
-#quote {
-  font-size: 20px;
-  font-weight: normal;
-}
 
-#author {
-  font-weight: normal;
-  font-size: 20px;
-}
 
-.topnav {
-  overflow: hidden;
-  width: auto;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+/* Div Styling */
 
 div.welcome {
   flex: 1;
@@ -59,63 +67,6 @@ div.welcome {
   text-align: center;
   font: optional;
   font-size: larger;
-}
-
-div.welcome.light-mode {
-  color: black;
-  background-color: white;
-}
-
-div.welcome.dark-mode {
-  background-color: rgb(48, 49, 66);
-  color: rgb(196, 196, 196);
-  transition: background-color 1s ease;
-}
-
-.welcome h1.light-mode {
-  color: blue;
-  transition: color 1s ease;
-}
-
-.welcome h1.dark-mode {
-  color: #14123b;
-  transition: color 1s ease;
-}
-
-/* Home page section, 3 columns */
-.row2 {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.column {
-  flex: 25%;
-  font-size: medium;
-  text-align: center;
-  /* margin-bottom: 20px; */
-  padding-bottom: 30px;
-}
-
-.column.light-mode {
-  color: blue;
-  border: solid skyblue;
-  transition: color 1s ease;
-}
-
-.column.dark-mode {
-  color: #212031;
-  border: solid rgb(21, 31, 36);
-  transition: color 1s ease;
-}
-
-img.healthy {
-  padding-left: 25%;
-  padding-right: 25%;
-  position: relative;
-}
-
-.imgHeader {
-  text-align: center;
 }
 
 div.media {
@@ -133,20 +84,51 @@ div.graph {
   border: solid skyblue;
 }
 
-div.card.dark-mode {
-  background-color: rgb(21, 24, 53);
+
+
+/* Class Styling */
+
+.quotes {
+  text-align: center;
+  padding: 5px;
 }
 
-div.graph.light-mode {
-  color: blue;
-  border: solid skyblue;
-  transition: color 1s ease;
+.topnav {
+  overflow: hidden;
+  width: auto;
 }
 
-div.graph.dark-mode {
-  border: solid rgb(67, 96, 107);
-  color: rgb(73, 73, 139);
-  transition: color 1s ease;
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Home page section, 3 columns */
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  font-size: medium;
+  text-align: center;
+  /* margin-bottom: 20px; */
+  padding-bottom: 30px;
+}
+
+img.healthy {
+  padding-left: 25%;
+  padding-right: 25%;
+  position: relative;
+}
+
+.imgHeader {
+  text-align: center;
 }
 
 /* canvas {
@@ -168,18 +150,6 @@ div.graph.dark-mode {
   opacity: 0.1;
 } */
 
-@media screen and (max-width: 992px) {
-  .column {
-    flex: 50%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .row2 {
-    flex-direction: column;
-  }
-}
-
 .no-button {
   float: right;
   /* display: block; */
@@ -190,22 +160,6 @@ div.graph.dark-mode {
   background-color: none; */
 }
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-image: linear-gradient(
-    to bottom left,
-    rgb(16, 18, 54),
-    rgb(26, 56, 95),
-    rgb(35, 108, 131)
-  );
-  color: #ccc;
-}
-
 form.form {
   text-align: left;
   margin: 10px;
@@ -213,11 +167,6 @@ form.form {
   border: solid gray;
   width: auto;
   display: inline-block;
-}
-
-input {
-  margin: 5px;
-  align-content: right;
 }
 
 /* Cloud border for quotes */
@@ -264,6 +213,41 @@ input {
   border-bottom-left-radius: 0;
 }
 
+a.link {
+  color: rgb(223, 222, 222);
+}
+
+.aboutCard {
+  width: 18rem;
+  height: 31rem;
+  padding-right: 10px;
+  margin-right: 5px;
+  background: rgb(35, 108, 131);
+}
+
+.aboutUsList {
+  background: rgb(35, 108, 131);
+  color: #6bbbfc;
+}
+
+.aboutUsLI {
+  background: rgb(35, 108, 131);
+  color: #6bbbfc;
+}
+
+
+/* ID Styling */
+
+#quote {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#author {
+  font-weight: normal;
+  font-size: 20px;
+}
+
 #loginpic {
   background-image: url("https://medikeeper.com/wp-content/uploads/2018/12/20-Simple-Health-Habits-Blog.jpg");
 
@@ -275,42 +259,32 @@ input {
   /* position: relative; */
 }
 
-.title.light-mode {
-  color: white;
-}
-
-.title.dark-mode {
-  color: #ccc;
-  transition: background-color 1s ease;
-}
-
-body.light-mode {
-  background-color: white;
-  color: #333;
-  transition: background-color 1s ease;
-}
-body.dark-mode {
-  background-color: #2c2c2c;
-  color: rgb(194, 194, 194);
-  transition: background-color 1s ease;
-}
-
-a.link {
-  color: rgb(223, 222, 222);
-}
-
 #logout {
   color: white;
   background-color: transparent;
   border: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+
+/* Light Mode Styling */
+
+body.light-mode {
+  background-color: white;
+  color: rgb(7, 7, 7);
+  transition: background-color 1s ease;
 }
 
-/* The switch - the box around the slider */
+/* Dark Mode Styling */
+
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: rgb(153, 153, 153);
+  transition: background-color 1s ease;
+}
+
+/* Switch Styling */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -318,14 +292,12 @@ code {
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -364,11 +336,17 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }

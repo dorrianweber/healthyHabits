@@ -351,7 +351,7 @@ const SpendGraph = () => {
   return <Bar data={spendData} options={spendOptions} />;
 };
 
-const ExerciseGraphs = () => {
+const ExerciseGraph = () => {
   const [state, dispatch] = useAuthState();
   const [exData, setExData] = useState({});
   const [exOptions, setExOptions] = useState({});
@@ -427,4 +427,4 @@ const ExerciseGraphs = () => {
   return <Line data={exData} options={exOptions} />;
 };
 
-export { EatGraph, SleepGraph, SpendGraph, ExerciseGraphs };
+export { EatGraph, SleepGraph, SpendGraph, ExerciseGraph };
