@@ -76,6 +76,9 @@ function weeklyMail() {
   });
 }
 
+//Active API key
+const A_key = process.env.Active_API_key;
+
 //Active search section
 app.get("/active/:city", (req, res) => {
   console.log("hit active");
@@ -83,7 +86,7 @@ app.get("/active/:city", (req, res) => {
 
   axios
     .get(
-      `https://api.amp.active.com/v2/search/?city=${req.params.city}&state=ca&radius=50*current_page=1&per_page=50&sort=distance&registerable_only=true&query=running&exclude_children=false&api_key=2ts6ryqrzkb8ccq9ay7wnurq`
+      `https://api.amp.active.com/v2/search/?city=${req.params.city}&state=ca&radius=50*current_page=1&per_page=50&sort=distance&registerable_only=true&query=running&exclude_children=false&api_key=${A_key}`
     )
     .then((body) => {
       // console.log(body.data);
