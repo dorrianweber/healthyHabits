@@ -56,6 +56,12 @@ function Login() {
 
         if (response.status === 200) {
           console.log("Account created successfully!");
+          axios.post("/api/mailer", {
+            userData: {
+              name: userState.name,
+              email: userState.email,
+            },
+          });
           dispatch({
             type: "LOGIN",
             payload: { user: response.data.id },

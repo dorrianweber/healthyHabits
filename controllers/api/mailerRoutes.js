@@ -28,7 +28,8 @@ console.log(
   "------------------------------------------------------------------------------------------------"
 );
 
-const mailer = (userData) => {
+const mailer = (req, res) => {
+  const userData = req.body.userData;
   const smtpTransport = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -63,6 +64,9 @@ const mailer = (userData) => {
     error ? console.log(error) : console.log(response);
     smtpTransport.close();
   });
+  res.end();
 };
+
+router.post("/", mailer);
 
 module.exports = router;
