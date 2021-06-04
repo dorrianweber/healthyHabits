@@ -22,7 +22,7 @@ function About() {
             <Card className="aboutCard" style={{ marginBottom: "10px" }}>
               <Card.Img
                 variant="top"
-                src="https://www.jing.fm/clipimg/detail/221-2216832_wolverine-wolverine-png-marvel-wolverine.png"
+                src="/images/Wolverine.png"
                 style={{
                   height: "275px",
                   width: "275px",
@@ -67,7 +67,7 @@ function About() {
             <Card className="aboutCard" style={{ marginBottom: "10px" }}>
               <Card.Img
                 variant="top"
-                src="https://www.jing.fm/clipimg/detail/31-319221_cigarette-clipart-no-background-nightcrawler-transparent-background.png"
+                src="/images/NightCrawler.png"
                 style={{
                   height: "275px",
                   width: "275px",
@@ -109,7 +109,7 @@ function About() {
             <Card className="aboutCard" style={{ marginBottom: "10px" }}>
               <Card.Img
                 variant="top"
-                src="https://www.kindpng.com/picc/m/760-7600720_x-men-cyclops-comic-x-men-cyclops-hd.png"
+                src="/images/Cyclops.png"
                 style={{
                   height: "275px",
                   width: "275px",
@@ -151,7 +151,7 @@ function About() {
             <Card className="aboutCard" style={{ marginBottom: "10px" }}>
               <Card.Img
                 variant="top"
-                src="https://i.annihil.us/u/prod/marvel/i/mg/6/a0/50fef6e158082/standard_incredible.jpg"
+                src="/images/Xman.png"
                 style={{
                   height: "275px",
                   width: "275px",
@@ -194,7 +194,7 @@ function About() {
             <Card className="aboutCard" style={{ marginBottom: "10px" }}>
               <Card.Img
                 variant="top"
-                src="https://cdn11.bigcommerce.com/s-g46gbd16ag/images/stencil/640w/products/2248/1516/mafex.gambit0012__16959.1593001667.jpg?c=1"
+                src="/images/Gambit.png"
                 style={{
                   height: "275px",
                   width: "275px",

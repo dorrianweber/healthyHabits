@@ -83,7 +83,13 @@ function Login() {
     console.log(state);
   }, [state]);
   return (
-    <div className="container-flex" id="loginpic">
+    <div className="container-flex" id="loginpic" 
+    style={{ 
+     backgroundImage: "url(/images/BadHabitsBG.jpg)",
+     backgroundRepeat: "no-repeat",
+     backgroundSize: "cover",
+     backgroundAttachment: "fixed"
+     }}>
       <div className="row">
         <br />
         <div className="col-md">

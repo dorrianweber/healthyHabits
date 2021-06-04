@@ -16,10 +16,13 @@ function Profile() {
     return null;
   } else {
     return (
-      <section className="container" style={{ paddingBottom: "70px" }}>
+      <section className="container" style={{ paddingBottom: "70px"}}>
         <img
           alt="HealthyHabbitsLogo"
-          src="https://github.com/dorrianweber/project2/blob/main/public/images/healthyhabits.png?raw=true"
+          src="/images/Logo.png"
+          style={{display: "block",
+            marginLeft: "auto",
+            marginRight: "auto" }}
         />
         <div>
           <div className="row">

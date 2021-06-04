@@ -248,17 +248,6 @@ a.link {
   font-size: 20px;
 }
 
-#loginpic {
-  background-image: url("https://medikeeper.com/wp-content/uploads/2018/12/20-Simple-Health-Habits-Blog.jpg");
-
-  /* min-height: 380px; */
-
-  /* background-position: center; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* position: relative; */
-}
-
 #logout {
   color: white;
   background-color: transparent;
