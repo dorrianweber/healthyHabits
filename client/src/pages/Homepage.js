@@ -1,9 +1,9 @@
 import React from "react";
-//, { useState, useEffect }
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Media from "react-bootstrap/Media";
+
 
 function Homepage() {
   return (
@@ -25,14 +25,14 @@ function Homepage() {
           <img
             width={64}
             height={64}
-            src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/eatingSymbol.png?raw=true"
+            src="/images/EatingSymbol.png"
             alt="Generic placeholder"
             style={{ padding: "10px" }}
           />
           <img
             width={64}
             height={64}
-            src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/spendingSymbol.png?raw=true"
+            src="/images/SpendingSymbol.png"
             alt="Generic placeholder"
             style={{ padding: "10px" }}
           />
@@ -40,7 +40,7 @@ function Homepage() {
             width={64}
             height={64}
             id="image3"
-            src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/sleepingSymbol.png?raw=true"
+            src="/images/SleepingSymbol.png"
             alt="Person sleeping in bed"
             style={{ padding: "10px" }}
           />
@@ -48,7 +48,7 @@ function Homepage() {
             width={64}
             height={64}
             id="image4"
-            src="https://github.com/dorrianweber/healthyHabits/blob/main/public/images/graphSymbol.png?raw=true"
+            src="/images/GraphSymbol.png"
             alt="Bar and line graphs"
             style={{ padding: "10px" }}
           />
@@ -73,7 +73,7 @@ function Homepage() {
           // className="container-flex"
           style={{
             backgroundImage:
-              "url(http://www.seekgif.com/uploads/blue-and-white-vector-background-4.jpeg)",
+              "url(/images/VectorBG.jpeg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -89,7 +89,7 @@ function Homepage() {
           >
             <Col md={4}>
               <img
-                src="https://molempire.com/app/uploads/2011/09/The-eatwell-plate-review-you-eating-habits-594x420.jpg"
+                src="/images/Plate.jpg"
                 alt="image1"
                 className="img-thumbnail"
                 style={{
@@ -192,7 +192,7 @@ function Homepage() {
             <Col ml={4}>
               <img
                 id="image2"
-                src="https://u2msxm5fmf-flywheel.netdna-ssl.com/wp-content/uploads/2014/05/Average-Spending-At-Starbucks.jpg"
+                src="/images/CoffeePrice.jpg"
                 alt="Stack of cash"
                 className="img-thumbnail"
                 style={{
@@ -216,7 +216,7 @@ function Homepage() {
           >
             <Col md={4}>
               <img
-                src="https://domf5oio6qrcr.cloudfront.net/medialibrary/10175/GettyImages-183148836.jpg"
+                src="/images/Clock.jpg"
                 alt="image1"
                 className="img-thumbnail"
                 style={{
@@ -286,13 +286,13 @@ function Homepage() {
 
         <img
           className="ml-3"
-          src="https://static.businessinsider.com/image/570680c6dd089546168b488d-/image.jpg"
+          src="/images/FoodCalories.png"
           alt="junk food"
           style={{ height: "200px", widht: "200px" }}
         />
         <img
           className="ml-3"
-          src="https://github.com/dorrianweber/healthyHabits/blob/main/client/public/images/Graph1.JPG?raw=true"
+          src="/images/GRAPH1.jpg"
           alt="Eating graph"
           style={{ height: "200px", widht: "200px" }}
         />
