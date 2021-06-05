@@ -29,13 +29,11 @@ export const reducer = (state, action) => {
     case "LOGIN":
       localStorage.setItem("auth", true);
       localStorage.setItem("user", JSON.stringify(action.payload.user));
-      // localStorage.setItem("token", JSON.stringify(action.payload.token));
 
       return {
         ...state,
         isAuthenticated: true,
         user: action.payload.user,
-        // token: action.payload.token
       };
     case "LOGOUT":
       localStorage.clear();
@@ -43,7 +41,6 @@ export const reducer = (state, action) => {
         ...state,
         isAuthenticated: false,
         user: null,
-        // token: null
       };
     default:
       return state;

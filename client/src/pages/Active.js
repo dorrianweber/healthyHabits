@@ -15,27 +15,26 @@ class SearchResultContainer extends Component {
     API.getactive(this.state.search)
       .then((data1) => {
         if (data1.data.data.results.length > 0) {
-        console.log("data1: ", data1.data.data.results);
-        this.setState({ active: data1.data.data.results });
+          console.log("data1: ", data1.data.data.results);
+          this.setState({ active: data1.data.data.results });
         } else {
-          this.setState({ active: [{
-            assetName: "No results found",
-            assetGuid: "",
-            homePageUrlAdr: "",
-            logoUrlAdr: "",
-            market: {marketName: ""},
-            organization: {organizationName: ""},
-            activityStartDate: "",
-            activityEndDate: "",
-            salesStatus: "",
-            place: {cityName: "", stateProvinceCode: ""}
-
-
-
-                                    }] 
-                                  })
+          this.setState({
+            active: [
+              {
+                assetName: "No results found",
+                assetGuid: "",
+                homePageUrlAdr: "",
+                logoUrlAdr: "",
+                market: { marketName: "" },
+                organization: { organizationName: "" },
+                activityStartDate: "",
+                activityEndDate: "",
+                salesStatus: "",
+                place: { cityName: "", stateProvinceCode: "" },
+              },
+            ],
+          });
         }
-        // return data1.body.json();
       })
       .catch((err) => console.log(err));
   };
@@ -52,101 +51,6 @@ class SearchResultContainer extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     this.generateActive();
-    //   const activitiesFiltered = this.state.active.filter((activity) => {
-    //     return (
-    //       activity.assetName
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       activity.market.marketName
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       activity.organization.organizationName
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       activity.activityStartDate
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       activity.activityEndDate
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       `${activity.place.cityName}${","} ${activity.place.stateProvinceCode}`
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase()) ||
-    //       `${activity.place.cityName} ${activity.place.stateProvinceCode}`
-    //         .toLowerCase()
-    //         .includes(this.state.active.toLowerCase())
-    //     );
-    //   });
-    //   this.setState({ filtered: activitiesFiltered });
-
-    // const employeesFiltered = this.state.results.filter((employee) => {
-    //   return (
-    //     employee.name.first
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     employee.name.last
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     `${employee.name.first} ${employee.name.last}`
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     employee.email
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     employee.location.state
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     employee.location.country
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     `${employee.location.state}${","} ${employee.location.country}`
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase()) ||
-    //     `${employee.location.state} ${employee.location.country}`
-    //       .toLowerCase()
-    //       .includes(this.state.search.toLowerCase())
-    //   );
-    // });
-    // this.setState({ filtered: employeesFiltered });
-    // };
-
-    // sortByCountry = (event) => {
-    //   event.preventDefault();
-    //   const employeesSorted = this.state.results;
-    //   if (!this.state.sortAsc) {
-    //     employeesSorted.sort(this.compareAsc);
-    //   } else {
-    //     employeesSorted.sort(this.compareDsc);
-    //   }
-    //   this.setState({ results: employeesSorted });
-    // };
-
-    // compareAsc = (a, b) => {
-    //   const countryA = a.location.country.toLowerCase();
-    //   const countryB = b.location.country.toLowerCase();
-
-    //   let comparison = 0;
-    //   if (countryA > countryB) {
-    //     comparison = 1;
-    //   } else if (countryA < countryB) {
-    //     comparison = -1;
-    //   }
-    //   this.setState({ sortAsc: true });
-    //   return comparison;
-    // };
-
-    // compareDsc = (a, b) => {
-    //   const countryA = a.location.country.toLowerCase();
-    //   const countryB = b.location.country.toLowerCase();
-
-    //   let comparison = 0;
-    //   if (countryA < countryB) {
-    //     comparison = 1;
-    //   } else if (countryA > countryB) {
-    //     comparison = -1;
-    //   }
-    //   this.setState({ sortAsc: false });
-    //   return comparison;
   };
 
   clear = (event) => {
@@ -183,18 +87,10 @@ class SearchResultContainer extends Component {
             >
               Clear
             </button>
-            {/* <label htmlFor="activity_type">Activity Type:</label>
-            <select name="activity_type" id="activity_type">
-              <option value="Select">Select one</option>
-              <option value="Running">Endurance-running</option>
-              <option value="Lunch">Camps-any</option>
-              <option value="Dinner">Dinner</option>
-              <option value="Snack">Snack</option>
-            </select> */}
           </div>
         </form>
 
-        <table className="table table-hover" style={{color: "gray"}}>
+        <table className="table table-hover" style={{ color: "gray" }}>
           <caption>List of activities near you</caption>
           <thead>
             <tr>
@@ -215,7 +111,7 @@ class SearchResultContainer extends Component {
                 <td>
                   <a href={result.homePageUrlAdr}>
                     <img
-                    alt=""
+                      alt=""
                       src={result.logoUrlAdr}
                       style={{
                         border: "1px solid #ddd",
@@ -243,5 +139,4 @@ class SearchResultContainer extends Component {
   }
 }
 
-// console.log("shows", this.state.results);
 export default SearchResultContainer;
