@@ -22,8 +22,7 @@ router.get("/", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    //
-    //const allEats = exerciseData.map((contents) => contents.get({ plain: true }));
+
     console.log(exerciseData);
     return res.json({ data: exerciseData, success: true });
   } catch (err) {

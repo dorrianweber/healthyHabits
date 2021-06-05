@@ -1,11 +1,9 @@
 const router = require("express").Router();
 const { User } = require("../../models");
-const mailer = require("./mailerRoutes");
 
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
-    // mailer(userData);
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -59,9 +57,5 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
-
-// router.post('/submit', (req, res) => {
-
-// });
 
 module.exports = router;
