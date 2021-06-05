@@ -36,7 +36,7 @@ function Login() {
         console.log(state);
         history.push("/profile");
       } else {
-        alert(response.statusText);
+        alert("incorrect email or password: ", response.statusText);
       }
     }
   };

@@ -14,8 +14,27 @@ class SearchResultContainer extends Component {
   generateActive = () => {
     API.getactive(this.state.search)
       .then((data1) => {
+        if (data1.data.data.results.length > 0) {
         console.log("data1: ", data1.data.data.results);
         this.setState({ active: data1.data.data.results });
+        } else {
+          this.setState({ active: [{
+            assetName: "No results found",
+            assetGuid: "",
+            homePageUrlAdr: "",
+            logoUrlAdr: "",
+            market: {marketName: ""},
+            organization: {organizationName: ""},
+            activityStartDate: "",
+            activityEndDate: "",
+            salesStatus: "",
+            place: {cityName: "", stateProvinceCode: ""}
+
+
+
+                                    }] 
+                                  })
+        }
         // return data1.body.json();
       })
       .catch((err) => console.log(err));
@@ -186,7 +205,6 @@ class SearchResultContainer extends Component {
               <th>Start Date</th>
               <th>End Date</th>
               <th>Registration status</th>
-
               <th>City</th>
               <th>State</th>
             </tr>
@@ -197,7 +215,7 @@ class SearchResultContainer extends Component {
                 <td>
                   <a href={result.homePageUrlAdr}>
                     <img
-                      alt={result.assetName}
+                    alt=""
                       src={result.logoUrlAdr}
                       style={{
                         border: "1px solid #ddd",
@@ -209,7 +227,6 @@ class SearchResultContainer extends Component {
                   </a>
                 </td>
                 <td>{result.assetName}</td>
-                {/* <td>{result.assetTopics.topic.topicName}</td> */}
                 <td>{result.market.marketName}</td>
                 <td>{result.organization.organizationName}</td>
                 <td>{result.activityStartDate}</td>
