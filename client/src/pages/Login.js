@@ -27,7 +27,7 @@ function Login() {
 
       console.log(response);
 
-      if (response.status === 200) {
+      if (!response.data.message === "Incorrect email or password, please try again") {
         console.log("success!");
         dispatch({
           type: "LOGIN",
@@ -36,7 +36,7 @@ function Login() {
         console.log(state);
         history.push("/profile");
       } else {
-        alert("incorrect email or password: ", response.statusText);
+        alert(response.data.message);
       }
     }
   };
