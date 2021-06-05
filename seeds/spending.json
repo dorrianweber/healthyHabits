@@ -3,21 +3,56 @@
     "restaurant": "17.39",
     "coffee": "4.87",
     "bar": "14.98",
-    "date": "5/25/21",
+    "date": "6/5/21",
     "user_id": 1
   },
   {
     "restaurant": "12.69",
     "coffee": "4.87",
     "bar": "0",
-    "date": "5/26/21",
+    "date": "6/4/21",
     "user_id": 1
   },
   {
-    "restaurant": "16.21",
-    "coffee": "4.87",
+    "restaurant": "38.21",
+    "coffee": "0",
     "bar": "0",
-    "date": "5/27/21",
+    "date": "6/3/21",
+    "user_id": 1
+  },
+  {
+    "restaurant": "0",
+    "coffee": "3.25",
+    "bar": "20.00",
+    "date": "6/2/21",
+    "user_id": 1
+  },
+  {
+    "restaurant": "10.05",
+    "coffee": "0",
+    "bar": "10.00",
+    "date": "6/1/21",
+    "user_id": 1
+  },
+  {
+    "restaurant": "0",
+    "coffee": "6.00",
+    "bar": "0",
+    "date": "5/31/21",
+    "user_id": 1
+  },
+  {
+    "restaurant": "18.05",
+    "coffee": "0",
+    "bar": "10.00",
+    "date": "5/30/21",
+    "user_id": 1
+  },
+  {
+    "restaurant": "0",
+    "coffee": "2.00",
+    "bar": "15.00",
+    "date": "5/29/21",
     "user_id": 1
   }
 ]
