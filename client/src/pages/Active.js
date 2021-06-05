@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import API from "../utils/API";
+import axios from "axios";
 
 class SearchResultContainer extends Component {
   state = {
@@ -12,7 +11,7 @@ class SearchResultContainer extends Component {
   };
 
   generateActive = () => {
-    API.getactive(this.state.search)
+    axios.get("/active/" + (this.state.search))
       .then((data1) => {
         if (data1.data.data.results.length > 0) {
           console.log("data1: ", data1.data.data.results);
