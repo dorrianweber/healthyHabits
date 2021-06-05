@@ -27,7 +27,7 @@ function Login() {
 
       console.log(response);
 
-      if (!response.data.message === "Incorrect email or password, please try again") {
+      if (response.status === 200) {
         console.log("success!");
         dispatch({
           type: "LOGIN",
@@ -36,7 +36,7 @@ function Login() {
         console.log(state);
         history.push("/profile");
       } else {
-        alert(response.data.message);
+        alert("incorrect email or password: ", response.statusText);
       }
     }
   };
@@ -83,13 +83,16 @@ function Login() {
     console.log(state);
   }, [state]);
   return (
-    <div className="container-flex" id="loginpic" 
-    style={{ 
-     backgroundImage: "url(/images/BadHabitsBG.jpg)",
-     backgroundRepeat: "no-repeat",
-     backgroundSize: "cover",
-     backgroundAttachment: "fixed"
-     }}>
+    <div
+      className="container-flex"
+      id="loginpic"
+      style={{
+        backgroundImage: "url(/images/BadHabitsBG.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="row">
         <br />
         <div className="col-md">
