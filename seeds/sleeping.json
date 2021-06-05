@@ -1,32 +1,42 @@
 [
   {
     "hours": "5",
-    "date": "5/27/21",
+    "date": "6/5/21",
     "user_id": 1
   },
   {
     "hours": "6",
-    "date": "5/26/21",
+    "date": "6/4/21",
     "user_id": 1
   },
   {
     "hours": "9",
-    "date": "5/25/21",
+    "date": "6/3/21",
     "user_id": 1
   },
   {
     "hours": "8",
-    "date": "5/24/21",
+    "date": "6/2/21",
     "user_id": 1
   },{
     "hours": "6.5",
-    "date": "5/23/21",
+    "date": "6/1/21",
     "user_id": 1
   },
   {
     "hours": "6",
-    "date": "3/26/21",
-    "user_id": 3
+    "date": "5/31/21",
+    "user_id": 1
+  },
+  {
+    "hours": "7",
+    "date": "5/30/21",
+    "user_id": 1
+  },
+  {
+    "hours": "8",
+    "date": "5/29/21",
+    "user_id": 1
   }
 ]
 
