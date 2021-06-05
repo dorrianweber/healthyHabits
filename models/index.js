@@ -7,7 +7,6 @@ const Exercise = require("./Exercise");
 // Eating relationships
 User.hasMany(Eating, {
   foreignKey: "user_id",
-  // onDelete: 'CASCADE'
 });
 
 Eating.belongsTo(User, {
@@ -17,7 +16,6 @@ Eating.belongsTo(User, {
 // Sleeping relationships
 User.hasMany(Sleeping, {
   foreignKey: "user_id",
-  // onDelete: 'CASCADE'
 });
 
 Sleeping.belongsTo(User, {
@@ -27,7 +25,6 @@ Sleeping.belongsTo(User, {
 // Spending relationships
 User.hasMany(Spending, {
   foreignKey: "user_id",
-  // onDelete: 'CASCADE'
 });
 
 Spending.belongsTo(User, {
@@ -37,7 +34,6 @@ Spending.belongsTo(User, {
 // Exercise relationships
 User.hasMany(Exercise, {
   foreignKey: "user_id",
-  // onDelete: 'CASCADE'
 });
 
 Exercise.belongsTo(User, {

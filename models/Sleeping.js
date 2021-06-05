@@ -20,7 +20,6 @@ Sleeping.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        // Check out this validation (convert to standard format using Moment??)
         isDate: true,
       },
     },
@@ -33,8 +32,8 @@ Sleeping.init(
       allowNull: false,
       references: {
         model: "user",
-        key: "id"
-      }
+        key: "id",
+      },
     },
   },
   {

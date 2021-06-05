@@ -20,29 +20,28 @@ Spending.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        // Check out this validation (convert to standard format using Moment??)
         isDate: true,
       },
     },
     restaurant: {
-        type: DataTypes.DECIMAL(10,2),
-        allowNull: true,
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true,
     },
     coffee: {
-        type: DataTypes.DECIMAL(10,2),
-        allowNull: true,
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true,
     },
     bar: {
-        type: DataTypes.DECIMAL(10,2),
-        allowNull: true,
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "user",
-        key: "id"
-      }
+        key: "id",
+      },
     },
   },
   {
@@ -55,16 +54,3 @@ Spending.init(
 );
 
 module.exports = Spending;
-
-
-
-
-
-
-
-
-
-
-
-
-

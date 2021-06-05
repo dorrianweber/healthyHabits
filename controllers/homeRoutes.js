@@ -27,26 +27,7 @@ router.get("/profile", withAuth, async (req, res) => {
       ],
     });
 
-    // const sleepingData = await Sleeping.find({
-    //   where:{
-    //      user_id: req.session.user_id,
-    //   }
-    // });
-
-    // const spendingData = await Spending.findAll(req.session.user_id, {
-    //   where: user_id = req.session.user_id
-    // });
-
-    // const eatingData = await Eating.findAll(req.session.user_id, {
-    //   where: user_id = req.session.user_id
-    // });
-
     const user = userData.get({ plain: true });
-
-    // const sleep = sleepingData.get({ plain: true });
-    // console.log(sleepingData);
-    // const spend = spendingData.get({ plain: true });
-    // const eat = eatingData.get({ plain: true });
 
     res.render("profile", {
       user,
