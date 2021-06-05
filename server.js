@@ -9,10 +9,8 @@ const cron = require("node-cron");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 const router = require("express").Router();
-
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 

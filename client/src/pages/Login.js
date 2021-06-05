@@ -27,7 +27,7 @@ function Login() {
 
       console.log(response);
 
-      if (!response.data.message === "Incorrect email or password, please try again") {
+      if (response.data.message === "You are now logged in!") {
         console.log("success!");
         dispatch({
           type: "LOGIN",
