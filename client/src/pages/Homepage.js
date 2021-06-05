@@ -4,7 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Media from "react-bootstrap/Media";
 
-
 function Homepage() {
   return (
     <Container className="container-flex" style={{ paddingBottom: "70px" }}>
@@ -59,7 +58,7 @@ function Homepage() {
           <Row className="row">
             <Col md={12}>
               {/* <Media.Body> */}
-              <p style={{textAlign: "center" }}>
+              <p style={{ textAlign: "center" }}>
                 "You'll never change your life until you change something you do
                 Daily. The secret of your success is found in your daily
                 routine." -John C. Maxwell
@@ -70,10 +69,8 @@ function Homepage() {
         </div>
         <hr />
         <Container
-          // className="container-flex"
           style={{
-            backgroundImage:
-              "url(/images/VectorBG.jpeg)",
+            backgroundImage: "url(/images/VectorBG.jpeg)",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
